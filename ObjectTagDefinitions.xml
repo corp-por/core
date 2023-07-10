@@ -1,0 +1,659 @@
+<!-- Object tags are assigned to client ids and tell the server what the properties the client understands about that object -->
+<ObjectTags>
+    <ObjectTag>
+        <Name>DefaultProperties</Name>
+        <SharedStateEntry name="TooltipString" type="string" value=""/>
+        <SharedStateEntry name="DefaultInteraction" type="string" value=""/>
+        <SharedStateEntry name="NoInteract" type="bool" value="False"/>
+        <SharedStateEntry name="DenyPickup" type="bool" value="True"/>
+        <SharedStateEntry name="DurabilityStr" type="string" value=""/>
+        <SharedStateEntry name="Category" type="string" value=""/>
+        <SharedStateEntry name="Rarity" type="string" value=""/>
+        <SharedStateEntry name="StackCount" type="double" value="0"/>
+        <SharedStateEntry name="CustomIcon" type="string" value=""/>
+        <SharedStateEntry name="IconBackground" type="string" value=""/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Human</Name>
+        <ClientId>1</ClientId>
+        <ClientId>26</ClientId>
+        <ClientId>27</ClientId>
+        <ClientId>50</ClientId>
+        <ClientId>51</ClientId>
+
+        <ClientId>139</ClientId>        <!-- Jester -->
+        <ClientId>307</ClientId>        <!-- Paladin -->
+
+        <SharedStateEntry name="DNAString" type="string" value=""/>
+        <SharedStateEntry name="CustomDNA" type="string" value=""/>        
+        <SharedStateEntry name="ActiveQuests" type="string" value=""/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Male</Name>
+        <ClientId>1</ClientId>
+        <ClientId>25</ClientId>
+        <ClientId>26</ClientId>
+        <ClientId>27</ClientId>
+
+        <ClientId>139</ClientId>        <!-- Jester -->
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Female</Name>
+        
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Undead</Name>
+        <ClientId>268</ClientId>
+        <ClientId>269</ClientId>
+        <ClientId>271</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Horse</Name>
+        <ClientId>59</ClientId>        
+    </ObjectTag>        
+    <ObjectTag>
+        <Name>CanEquipArmor</Name>
+        <ClientId>1</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>CanEquipWeapon</Name>
+        <ClientId>1</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Door</Name>
+        <SharedStateEntry name="IsOpen" type="bool" value="False"/>
+        <SharedStateEntry name="PlayClosedIdle" type="bool" value="False"/>
+        <SharedStateEntry name="DefaultInteraction" type="string" value="Open/Close"/>
+        <ClientId>91</ClientId>
+        <ClientId>93</ClientId>
+        <ClientId>143</ClientId>
+        <ClientId>204</ClientId>
+        <ClientId>310</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Lightable</Name>
+        <SharedStateEntry name="IsLit" type="bool" value="False"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>LockableDoor</Name>
+        <SharedStateEntry name="IsLocked" type="bool" value="False"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>DestructableObject</Name>
+        <SharedStateEntry name="IsDestroyed" type="bool" value="false"/>
+        <SharedStateEntry name="ObjectOffset" type="double" value="1.0"/>
+        <SharedStateEntry name="DefaultInteraction" type="string" value=""/>
+        <ClientId>223</ClientId>
+    </ObjectTag>
+       <ObjectTag>
+        <Name>ToggleSwitch</Name>
+        <SharedStateEntry name="IsActivated" type="bool" value="false"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>TriggerTrap</Name>
+        <SharedStateEntry name="IsTriggered" type="bool" value="false"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>AnimatedTrap</Name>
+        <SharedStateEntry name="AnimationParamater" type="double" value="0"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Container</Name>
+        <SharedStateEntry name="NumItems" type="int" value="0"/>
+        <SharedStateEntry name="Capacity" type="int" value="0"/>
+        <SharedStateEntry name="DenyPickup" type="bool" value="False"/>
+        <SharedStateEntry name="DefaultInteraction" type="string" value="Open"/>
+        <ClientId>3</ClientId>
+        <ClientId>4</ClientId>
+        <ClientId>44</ClientId>        <!-- ChestObject -->
+        <ClientId>206</ClientId>        <!-- LootChestObject -->
+        <ClientId>138</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>HarvestForageObject</Name>
+        <SharedStateEntry name="ObjectOffset" type="double" value="0.2"/>
+        <ClientId>160</ClientId>         <!-- YellowFlowerObject -->
+        <ClientId>159</ClientId>        <!-- WhiteFlowerObject -->
+        <ClientId>161</ClientId>        <!-- ThornObject -->
+        <ClientId>167</ClientId>        <!-- ScarabObject -->
+        <ClientId>162</ClientId>        <!-- RootObject -->
+        <ClientId>163</ClientId>        <!-- RedMushroomObject -->
+        <ClientId>164</ClientId>        <!-- PurpleFlowerObject -->
+        <ClientId>165</ClientId>        <!-- FernObject -->
+        <ClientId>166</ClientId>        <!-- BrownMushroomObject -->
+
+        <ClientId>206</ClientId>        <!-- LootChestObject -->
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Mobile</Name>
+        <ClientId>1</ClientId> <!--SyntyMaleObject-->
+        <ClientId>25</ClientId> <!--SyntyPeasantObject-->
+        <ClientId>26</ClientId> <!--SyntyMilitiaObject-->
+        <ClientId>27</ClientId> <!--SyntyKnightObject-->
+        <ClientId>51</ClientId> <!--SyntySkeletonSlaveObject-->
+        <ClientId>52</ClientId> <!--SyntySkeletonSoldierObject-->
+        <ClientId>53</ClientId> <!--SyntySkeletonSlaveObject-->
+        <ClientId>54</ClientId> <!--SyntySkeletonKnightObject-->
+        <ClientId>55</ClientId> <!--SyntyGoblinFemaleObject-->
+        <ClientId>56</ClientId> <!--SyntyGoblinMaleObject-->
+        <ClientId>57</ClientId> <!--SyntyGoblinShamanObject-->
+        <ClientId>58</ClientId> <!--SyntyGoblinWarChiefObject-->
+        <ClientId>59</ClientId> <!--SyntyGoblinWarriorFemaleObject-->
+        <ClientId>60</ClientId> <!--SyntyGoblinWarriorMaleObject-->
+        <ClientId>61</ClientId> <!--SyntyRockgolemObjectObject-->
+        
+        <ClientId>62</ClientId> <!--Bearobject-->
+        <ClientId>63</ClientId> <!--Catobject-->
+        <ClientId>64</ClientId> <!--CowObject-->
+        <ClientId>65</ClientId> <!--CrocodileObject-->
+        <ClientId>66</ClientId> <!--DeerObject-->
+        <ClientId>67</ClientId> <!--ElephantObject-->
+        <ClientId>68</ClientId> <!--GiraffeObject-->
+        <ClientId>69</ClientId> <!--HorseObject-->
+        <ClientId>70</ClientId> <!--RabbitObject-->
+        <ClientId>71</ClientId> <!--SnakeObject-->
+        <ClientId>72</ClientId> <!--SpiderObject-->
+        <ClientId>73</ClientId> <!--WolfObject-->
+        <ClientId>74</ClientId> <!--GorillaObject-->
+        <ClientId>158</ClientId> <!--BlackWolfObject-->
+        <ClientId>157</ClientId> <!--TimberWolfObject-->
+        <ClientId>156</ClientId> <!--SpiderRedObject-->
+        <ClientId>155</ClientId> <!--SpiderGreenObject-->
+        <ClientId>154</ClientId> <!--RedBoardObject-->
+        <ClientId>153</ClientId> <!--PantherObject-->
+        <ClientId>152</ClientId> <!--MountainLionObject-->
+        <ClientId>151</ClientId> <!--LeopardObject-->
+        <ClientId>150</ClientId> <!--GrizzlyBearObject-->
+        <ClientId>149</ClientId> <!--CougarObject-->
+        <ClientId>148</ClientId> <!--BoarObject-->
+        <ClientId>147</ClientId> <!--BlackBoarObject-->
+        <ClientId>146</ClientId> <!--BlackBearObject-->
+
+        <ClientId>124</ClientId> <!--TitanObject-->
+        <ClientId>125</ClientId> <!--DemonObject-->
+        <ClientId>126</ClientId> <!--BigOrkObject-->
+        <ClientId>127</ClientId> <!--OgreObject-->
+        <ClientId>128</ClientId> <!--GhostMaleObject-->
+        <ClientId>129</ClientId> <!--GhostFemaleObject-->
+        <ClientId>130</ClientId> <!--TormentedSoulObject-->
+        <ClientId>145</ClientId> <!--DeathknightObject-->
+        <ClientId>198</ClientId> <!--TigerObject-->
+
+        <ClientId>139</ClientId> <!-- Jester -->
+        <ClientId>184</ClientId> <!--SyntyBlacksmithFemaleObject-->
+        <ClientId>185</ClientId> <!--SyntyMerchantObject-->
+        <ClientId>186</ClientId> <!--SyntyMageObject-->
+        <ClientId>187</ClientId> <!--SyntyHermitObject-->
+        <ClientId>188</ClientId> <!--SyntyAlchemistObject-->
+        <ClientId>189</ClientId> <!--SyntyBartenderObject-->
+        <ClientId>305</ClientId> <!--SyntyBlacksmithObject-->
+
+        <ClientId>208</ClientId> <!--SyntyPeasantFemaleObject-->
+        <ClientId>220</ClientId> <!--FishDudeeObject-->
+        <ClientId>221</ClientId> <!--SandElementalObject-->
+        <ClientId>225</ClientId> <!--CoastlingObject-->
+        <ClientId>230</ClientId> <!--ChiefAshObject-->
+        <ClientId>246</ClientId> <!--LochlingObject-->
+        <ClientId>247</ClientId> <!--MurrayObject-->
+        <ClientId>233</ClientId> <!--StarvingBearObject-->
+        <ClientId>234</ClientId> <!--SyntyPeasantWestholmeObject-->
+        <ClientId>235</ClientId> <!--SyntyPeasantFemaleWestholmeObject-->
+        <ClientId>236</ClientId> <!--SkeletonPeasantObject-->
+        <ClientId>243</ClientId> <!--DiseasedBearObject-->
+        <ClientId>244</ClientId> <!--DiseasedWolfObject-->
+        <ClientId>245</ClientId> <!--DiseasedBoarObject-->
+        <ClientId>249</ClientId> <!--BlackWizardObject-->
+        <ClientId>250</ClientId> <!--SkeletonWizardObject-->
+        <ClientId>251</ClientId> <!--SyntyCaptainObject-->
+        <ClientId>252</ClientId> <!--SyntyHunterObject-->
+        <ClientId>253</ClientId> <!--SyntyLordObject-->
+        <ClientId>256</ClientId> <!--SyntyPeasantFemaleAltObject-->
+        <ClientId>257</ClientId> <!--SyntyCommanderObject-->
+        <ClientId>258</ClientId> <!--SyntyPriestObject-->
+        <ClientId>260</ClientId> <!--GolemObject-->
+        <ClientId>286</ClientId> <!--FishDudeMageObject-->
+        <ClientId>287</ClientId> <!--PirateFirstHandObject-->
+        <ClientId>290</ClientId> <!--CoastlingMysticObject-->
+        <ClientId>291</ClientId> <!--LochlingMysticObject-->
+        <ClientId>303</ClientId> <!--FishDudeeObject-->
+        <ClientId>306</ClientId> <!--GoblinBomberObject-->
+        <ClientId>307</ClientId> <!--PaladinObject-->
+
+
+        <SharedStateEntry name="Title" type="string" value=""/>
+        <SharedStateEntry name="AudioIdentifierOverride" type="string" value=""/>
+        <SharedStateEntry name="CombatMode" type="bool" value="False" restriction="runtime"/>
+        <SharedStateEntry name="IsDead" type="bool" value="False" restriction="runtime"/>
+        <!-- This allows them to hold objects on thier body -->
+        <SharedStateEntry name="Capacity" type="int" value="2000" restriction="runtime"/>
+        <SharedStateEntry name="DisplayName" type="string" value=""/>
+        <SharedStateEntry name="BodyOffset" type="double" value="0.8"/>
+        <SharedStateEntry name="IsBoss" type="bool" value="false"/>        
+        <SharedStateEntry name="Pose" type="string" value=""/>
+    </ObjectTag>  
+    <ObjectTag>
+        <Name>SyntyArmor</Name>
+        <SharedStateEntry name="Color_Primary" type="string" value="" restriction="readonly"/>
+        <SharedStateEntry name="Color_Secondary" type="string" value="" restriction="readonly"/>
+        <SharedStateEntry name="Color_Leather_Primary" type="string" value="" restriction="readonly"/>
+        <SharedStateEntry name="Color_Leather_Secondary" type="string" value="" restriction="readonly"/>
+        <SharedStateEntry name="Color_Metal_Primary" type="string" value="" restriction="readonly"/>
+        <SharedStateEntry name="Color_Metal_Secondary" type="string" value="" restriction="readonly"/>
+        <SharedStateEntry name="Color_Metal_Dark" type="string" value="" restriction="readonly"/>
+
+        <ClientId>96</ClientId> <!--BearHelmObject-->
+        <ClientId>97</ClientId> <!--WolfHelmObject-->
+        <ClientId>168</ClientId> <!--Hat02Object-->
+        <ClientId>169</ClientId> <!--Hat03Object-->
+        <ClientId>170</ClientId> <!--Hat07Object-->
+        <ClientId>171</ClientId> <!--Hat08Object-->
+        <ClientId>172</ClientId> <!--Hat11Object-->
+        <ClientId>173</ClientId> <!--Hat12Object-->
+        <ClientId>79</ClientId> <!--Helm02Object-->
+        <ClientId>174</ClientId> <!--Helm03Object-->
+        <ClientId>175</ClientId> <!--Helm08Object-->
+        <ClientId>176</ClientId> <!--Helm10Object-->
+        <ClientId>282</ClientId> <!--TurbanHatObject-->
+        <ClientId>283</ClientId> <!--SalemHatObject-->
+        <ClientId>284</ClientId> <!--SultanHatObject-->
+        <ClientId>285</ClientId> <!--BandanaMaskObject-->
+        <ClientId>131</ClientId> <!--WizardHatObject-->
+
+        <ClientId>75</ClientId> <!--PlateChestObject-->
+        <ClientId>100</ClientId> <!--HideChestObject-->
+        <ClientId>105</ClientId> <!--LeatherChestObject-->
+        <ClientId>178</ClientId> <!--HalfPlateChestObject-->
+        <ClientId>179</ClientId> <!--HardenedChestObject-->
+        
+        <ClientId>177</ClientId> <!--CoatObject-->
+        <ClientId>180</ClientId> <!--JacketObject-->
+        <ClientId>181</ClientId> <!--JerkinObject-->
+        <ClientId>182</ClientId> <!--JourneymanChestObject-->
+        <ClientId>183</ClientId> <!--ShirtObject-->        
+
+        <ClientId>76</ClientId> <!--PlateArmsObject-->
+        <ClientId>98</ClientId> <!--HideArmsObject-->
+        <ClientId>103</ClientId> <!--LeatherArmorObject-->     
+        
+        <ClientId>80</ClientId> <!--PlateLegsObject-->
+        <ClientId>102</ClientId> <!--HideLegsObject-->
+        <ClientId>107</ClientId> <!--LeatherLegsObject-->
+        <ClientId>205</ClientId> <!--PantLegsObject-->
+
+        <ClientId>78</ClientId> <!--PlateGlovesObject-->
+        <ClientId>101</ClientId> <!--HideGlovesObject-->
+        <ClientId>106</ClientId> <!--LeatherGlovesObject-->
+
+        <ClientId>77</ClientId> <!--PlateBootsObject-->
+        <ClientId>104</ClientId> <!--HideBootsObject-->
+        <ClientId>99</ClientId> <!--LeatherBootsObject-->
+
+        <ClientId>261</ClientId> <!--PlateShoulders1Object-->
+        <ClientId>262</ClientId> <!--PlateShoulders2Object-->
+        <ClientId>263</ClientId> <!--PlateShoulders3Object-->
+        <ClientId>264</ClientId> <!--PlateShoulders4Object-->
+        <ClientId>265</ClientId> <!--PlateShoulders5Object-->
+        <ClientId>266</ClientId> <!--PlateShoulders6Object-->
+        <ClientId>267</ClientId> <!--PlateShoulders7Object-->
+        <ClientId>268</ClientId> <!--PlateShoulders8Object-->
+        <ClientId>269</ClientId> <!--PlateShoulders9Object-->
+        <ClientId>270</ClientId> <!--PlateShoulders10Object-->
+        <ClientId>271</ClientId> <!--PlateShoulders11Object-->
+        <ClientId>272</ClientId> <!--PlateShoulders12Object-->
+        <ClientId>273</ClientId> <!--PlateShoulders13Object-->
+        <ClientId>274</ClientId> <!--PlateShoulders14Object-->
+        <ClientId>275</ClientId> <!--PlateShoulders15Object-->
+        <ClientId>276</ClientId> <!--PlateShoulders16Object-->
+        <ClientId>277</ClientId> <!--LeatherShoulders1Object-->
+        <ClientId>278</ClientId> <!--LeatherShoulders2Object-->
+        <ClientId>279</ClientId> <!--LeatherShoulders3Object-->
+        <ClientId>280</ClientId> <!--LeatherShoulders4Object-->
+        <ClientId>281</ClientId> <!--LeatherShoulders5Object-->
+        <ClientId>308</ClientId> <!--ChainChestObject-->
+        <ClientId>309</ClientId> <!--ChainHelm02Object-->
+        <ClientId>311</ClientId> <!--ChainArmsObject-->
+        <ClientId>312</ClientId> <!--ChainLegsObject-->
+        <ClientId>313</ClientId> <!--ChainGlovesObject-->
+        <ClientId>314</ClientId> <!--ChainBootsObject-->
+
+
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Backpack</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Backpack" restriction="readonly"/>
+        
+        <ClientId>4</ClientId>
+    </ObjectTag>
+        <ObjectTag>
+        <Name>TradeObject</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Trade" restriction="readonly"/>
+       
+        <ClientId>3</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Ring</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Ring" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Necklace</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Necklace" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>HorseBackpack</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Backpack" restriction="readonly"/>
+        <SharedStateEntry name="ContainerWindowType" type="string" value="Backpack" restriction="readonly"/>        
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Familiar</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Familiar" restriction="readonly"/>
+    </ObjectTag>
+    
+    <ObjectTag>
+        <Name>Weapon</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="RightHand" restriction="readonly"/>
+        <SharedStateEntry name="DPS" type="double" value="0.0" restriction="readonly"/>
+        <ClientId>7</ClientId><!--Sword-->
+        <ClientId>28</ClientId><!--Hatchet-->
+        <ClientId>40</ClientId><!--Bow-->
+        <ClientId>50</ClientId><!--MagicStaff-->
+        <ClientId>108</ClientId><!--Spear-->
+        <ClientId>122</ClientId><!--PickObject-->
+        <ClientId>132</ClientId><!--HalberdObject-->
+        <ClientId>209</ClientId><!--PitchforkObject-->
+        <ClientId>210</ClientId><!--DaggerObject-->
+        <ClientId>232</ClientId><!--MaceObject-->
+        <ClientId>231</ClientId><!--TwoHammerObject-->
+        <ClientId>123</ClientId><!--TwoAxeObject-->
+
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Shield</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="LeftHand" restriction="readonly"/>
+        <ClientId>5</ClientId><!--SwordL-->
+        <ClientId>133</ClientId><!--StandardShield-->
+        <ClientId>134</ClientId><!--KiteShield-->
+        <ClientId>135</ClientId><!--Buckler-->
+        <ClientId>136</ClientId><!--RoundShield-->
+        <ClientId>137</ClientId><!--BasedShield-->
+    </ObjectTag>
+    <ObjectTag>
+        <Name>ItemBar</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="ItemBar" restriction="readonly"/>
+        <SharedStateEntry name="EquipmentContainer" type="string" value="RightHand" restriction="readonly"/>
+        <ClientId>2</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Torch</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Torch" restriction="readonly"/>
+        <ClientId>37</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Head</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Head" restriction="readonly"/>
+        <ClientId>96</ClientId> <!--BearHelmObject-->
+        <ClientId>97</ClientId> <!--WolfHelmObject-->
+        <ClientId>168</ClientId> <!--Hat02Object-->
+        <ClientId>169</ClientId> <!--Hat03Object-->
+        <ClientId>170</ClientId> <!--Hat07Object-->
+        <ClientId>171</ClientId> <!--Hat08Object-->
+        <ClientId>172</ClientId> <!--Hat11Object-->
+        <ClientId>173</ClientId> <!--Hat12Object-->
+        <ClientId>79</ClientId> <!--Helm02Object-->
+        <ClientId>174</ClientId> <!--Helm03Object-->
+        <ClientId>175</ClientId> <!--Helm08Object-->
+        <ClientId>176</ClientId> <!--Helm10Object-->
+        <ClientId>131</ClientId> <!--WizardHatObject-->
+        <ClientId>282</ClientId> <!--TurbanHatObject-->
+        <ClientId>283</ClientId> <!--SalemHatObject-->
+        <ClientId>284</ClientId> <!--SultanHatObject-->
+        <ClientId>285</ClientId> <!--BandanaMaskObject-->
+        <ClientId>309</ClientId> <!--ChainHelm02Object-->
+        
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Chest</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Chest" restriction="readonly"/>
+        <ClientId>75</ClientId> <!--PlateChestObject-->
+        <ClientId>100</ClientId> <!--HideChestObject-->
+        <ClientId>105</ClientId> <!--LeatherChestObject-->
+        <ClientId>178</ClientId> <!--HalfPlateChestObject-->
+        <ClientId>179</ClientId> <!--HardenedChestObject-->
+
+        <ClientId>177</ClientId> <!--CoatObject-->
+        <ClientId>180</ClientId> <!--JacketObject-->
+        <ClientId>181</ClientId> <!--JerkinObject-->
+        <ClientId>182</ClientId> <!--JourneymanChestObject-->
+        <ClientId>183</ClientId> <!--ShirtObject-->
+        <ClientId>308</ClientId> <!--ChainChestObject-->
+
+    </ObjectTag>
+        <ObjectTag>
+        <Name>Arms</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Arms" restriction="readonly"/>
+        <ClientId>76</ClientId> <!--PlateArmsObject-->
+        <ClientId>98</ClientId> <!--HideArmsObject-->
+        <ClientId>103</ClientId> <!--LeatherArmorObject-->
+        <ClientId>311</ClientId> <!--ChainArmsObject-->
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Legs</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Legs" restriction="readonly"/>
+        <ClientId>80</ClientId> <!--PlateLegsObject-->
+        <ClientId>102</ClientId> <!--HideLegsObject-->
+        <ClientId>107</ClientId> <!--LeatherLegsObject-->
+        <ClientId>205</ClientId> <!--LeatherLegsObject-->
+        <ClientId>312</ClientId> <!--ChainLegsObject-->
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Gloves</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Gloves" restriction="readonly"/>
+        <ClientId>78</ClientId> <!--PlateGlovesObject-->
+        <ClientId>101</ClientId> <!--HideGlovesObject-->
+        <ClientId>106</ClientId> <!--LeatherGlovesObject-->
+        <ClientId>313</ClientId> <!--ChainGlovesObject-->
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Boots</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Boots" restriction="readonly"/>
+        <ClientId>77</ClientId> <!--PlateBootsObject-->
+        <ClientId>104</ClientId> <!--HideBootsObject-->
+        <ClientId>99</ClientId> <!--LeatherBootsObject-->
+        <ClientId>314</ClientId> <!--ChainBootsObject-->
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Shoulders</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Shoulders" restriction="readonly"/>
+        <ClientId>261</ClientId> <!--PlateShoulders1Object-->
+        <ClientId>262</ClientId> <!--PlateShoulders2Object-->
+        <ClientId>263</ClientId> <!--PlateShoulders3Object-->
+        <ClientId>264</ClientId> <!--PlateShoulders4Object-->
+        <ClientId>265</ClientId> <!--PlateShoulders5Object-->
+        <ClientId>266</ClientId> <!--PlateShoulders6Object-->
+        <ClientId>267</ClientId> <!--PlateShoulders7Object-->
+        <ClientId>268</ClientId> <!--PlateShoulders8Object-->
+        <ClientId>269</ClientId> <!--PlateShoulders9Object-->
+        <ClientId>270</ClientId> <!--PlateShoulders10Object-->
+        <ClientId>271</ClientId> <!--PlateShoulders11Object-->
+        <ClientId>272</ClientId> <!--PlateShoulders12Object-->
+        <ClientId>273</ClientId> <!--PlateShoulders13Object-->
+        <ClientId>274</ClientId> <!--PlateShoulders14Object-->
+        <ClientId>275</ClientId> <!--PlateShoulders15Object-->
+        <ClientId>276</ClientId> <!--PlateShoulders16Object-->
+        <ClientId>277</ClientId> <!--LeatherShoulders1Object-->
+        <ClientId>278</ClientId> <!--LeatherShoulders2Object-->
+        <ClientId>279</ClientId> <!--LeatherShoulders3Object-->
+        <ClientId>280</ClientId> <!--LeatherShoulders4Object-->
+        <ClientId>281</ClientId> <!--LeatherShoulders5Object-->
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Cloak</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Cloak" restriction="readonly"/>
+        <ClientId>140</ClientId> <!--CloakObject-->
+        <ClientId>141</ClientId> <!--ShroudObject-->
+        <ClientId>288</ClientId> <!--BagObject-->
+        <ClientId>289</ClientId> <!--BigBagObject-->
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Ring</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Ring" restriction="readonly"/>
+        <ClientId>292</ClientId> <!--Ring1Object-->
+        <ClientId>293</ClientId> <!--Ring2Object-->
+        <ClientId>294</ClientId> <!--Ring3Object-->
+        <ClientId>295</ClientId> <!--Ring4Object-->
+        <ClientId>296</ClientId> <!--Ring5Object-->
+        <ClientId>297</ClientId> <!--Ring6Object-->
+        <ClientId>298</ClientId> <!--Ring7Object-->
+        <ClientId>299</ClientId> <!--Ring8Object-->
+        <ClientId>300</ClientId> <!--Ring9Object-->
+        <ClientId>301</ClientId> <!--Ring10Object-->
+    </ObjectTag>
+    <ObjectTag>
+        <Name>BodyPartHead</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="BodyPartHead" restriction="readonly"/>    
+    </ObjectTag>
+    <ObjectTag>
+        <Name>BodyPartHair</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="BodyPartHair" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>BodyPartFacialHair</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="BodyPartFacialHair" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>HarvestForageObject</Name>
+        <SharedStateEntry name="ObjectOffset" type="double" value="0.2"/>
+        <ClientId>159</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Mount</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Mount" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Trade</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Trade" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Announcment Board</Name>
+        <SharedStateEntry name="ContainerWindowType" type="string" value="Chest" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Treasure Chest</Name>
+        <SharedStateEntry name="ContainerWindowType" type="string" value="Chest" restriction="readonly"/>
+        <SharedStateEntry name="EquipSlot" type="string" value="" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Treasure Chest 2</Name>
+        <SharedStateEntry name="ContainerWindowType" type="string" value="Chest" restriction="readonly"/>
+        <SharedStateEntry name="EquipSlot" type="string" value="" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Treasure Chest 3</Name>
+        <SharedStateEntry name="ContainerWindowType" type="string" value="Chest" restriction="readonly"/>
+        <SharedStateEntry name="EquipSlot" type="string" value="" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Treasure Chest 4</Name>
+        <SharedStateEntry name="ContainerWindowType" type="string" value="Chest" restriction="readonly"/>
+        <SharedStateEntry name="EquipSlot" type="string" value="" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Treasure Chest 5</Name>
+        <SharedStateEntry name="ContainerWindowType" type="string" value="Chest" restriction="readonly"/>
+        <SharedStateEntry name="EquipSlot" type="string" value="" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Coffin</Name>
+        <SharedStateEntry name="ContainerWindowType" type="string" value="Coffin" restriction="readonly"/>
+        <ClientId>1</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Bone Chest</Name>
+        <SharedStateEntry name="ContainerWindowType" type="string" value="BoneChest" restriction="readonly"/>     
+    </ObjectTag>    
+    <ObjectTag>
+        <Name>Crate</Name>
+        <SharedStateEntry name="ContainerWindowType" type="string" value="Crate" restriction="readonly"/>
+        <SharedStateEntry name="EquipSlot" type="string" value="TempPack" restriction="readonly"/>
+        <ClientId>138</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Lockbox</Name>
+        <SharedStateEntry name="ContainerWindowType" type="string" value="Lockbox" restriction="readonly"/>
+    </ObjectTag>
+     <ObjectTag>
+        <Name>Pouch</Name>
+        <SharedStateEntry name="ContainerWindowType" type="string" value="Pouch" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>TradePouch</Name>
+        <SharedStateEntry name="ContainerWindowType" type="string" value="Trade" restriction="readonly"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Barrel</Name>
+        <SharedStateEntry name="ResourceSourceId" type="string" value="Wine" restriction="readonly"/>
+        <VisualState id="1" name="Depleted" collisionEnabled="true"/>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Iron</Name>
+        <SharedStateEntry name="ResourceSourceId" type="string" value="Iron" restriction="readonly"/>
+        <VisualState id="1" name="Hidden" collisionEnabled="false"/>
+        <ClientId>1162</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Stone</Name>
+        <SharedStateEntry name="ResourceSourceId" type="string" value="Stone" restriction="readonly"/>
+        <VisualState id="1" name="Hidden" collisionEnabled="false"/>
+        <ClientId>23</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>TerrainModification</Name>
+        <SharedStateEntry name="TerrainType" type="int" value="8"/>
+        <SharedStateEntry name="ShouldFlatten" type="bool" value="true"/>
+        <SharedStateEntry name="ShouldChangeTexture" type="bool" value="true"/>
+        <SharedStateEntry name="ForceHeight" type="bool" value="false"/>
+        <SharedStateEntry name="TerrainHeight" type="int" value="0"/>
+        <ClientId>6</ClientId>
+    </ObjectTag>
+    <ObjectTag>
+        <Name>ResourceNodeVisualStates</Name>
+        <SharedStateEntry name="VisualState" type="string" value="Default"/>
+    </ObjectTag>   
+
+    <ObjectTag>
+        <Name>CollectionQuestItem</Name>
+        <SharedStateEntry name="QuestId" type="string" value=""/>
+        <ClientId>119</ClientId> <!--WoodObject-->
+        <ClientId>203</ClientId> <!--WeaponRackObject-->
+        <ClientId>222</ClientId> <!--BoxOfToolsObject-->
+        <ClientId>304</ClientId> <!--PowderKegObject-->
+        <ClientId>224</ClientId> <!--ElephantBoneObject-->
+        <ClientId>226</ClientId> <!--FoodCrateObject-->
+        <ClientId>227</ClientId> <!--SugarcaneBundleObject-->
+        <ClientId>228</ClientId> <!--FishRackObject-->
+        <ClientId>229</ClientId> <!--AshLogObject-->
+        <ClientId>237</ClientId> <!--BasketofApplesObject-->
+        <ClientId>238</ClientId> <!--BearScatObject-->
+        <ClientId>239</ClientId> <!--GrainSackObject-->
+        <ClientId>240</ClientId> <!--PaladinCorpseObject-->
+        <ClientId>241</ClientId> <!--HolyWaterReceptacleObject-->
+        <ClientId>242</ClientId> <!--CursedUrnObject-->
+        <ClientId>217</ClientId> <!--TankardObject-->
+        <ClientId>88</ClientId> <!--PumpkinObject-->
+        <ClientId>302</ClientId> <!--GrainCartObject-->
+    </ObjectTag>   
+
+    <ObjectTag>
+        <Name>HasVariation</Name>
+        <SharedStateEntry name="Variation" type="string" value="Default"/>
+        <ClientId>5</ClientId><!--SwordL-->
+        <ClientId>7</ClientId> <!--SwordObject-->
+        <ClientId>232</ClientId> <!--MaceObject-->
+        <ClientId>50</ClientId> <!--MagicStaffObject-->
+        <ClientId>231</ClientId> <!--TwoHammerObject-->
+        <ClientId>133</ClientId> <!--ShieldObject-->
+        <ClientId>132</ClientId> <!--TwoAxeObject-->
+        <ClientId>123</ClientId> <!--HalberdObject-->
+        <ClientId>75</ClientId> <!--Chest-->
+    </ObjectTag>   
+
+</ObjectTags>

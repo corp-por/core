@@ -1,0 +1,11 @@
+<ObjectTemplate>
+	<ClientId>0</ClientId>
+	<Name>Instance Controller</Name>
+	<Tag>ClusterController</Tag>
+	<ObjectVariableComponent>
+		<BoolVariable Name="NoReset">True</BoolVariable>
+	</ObjectVariableComponent>
+	<ScriptEngineComponent>
+		<LuaModule Name="controllers.instance"/>
+	</ScriptEngineComponent>
+</ObjectTemplate>

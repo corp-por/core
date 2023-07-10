@@ -1,0 +1,6 @@
+<ObjectTemplate>
+    <Name>[0078ff]Bank Box[-]</Name>
+	<ClientId>138</ClientId> 
+	<SharedStateEntry name="Capacity" type="int" value="30"/>
+	<SharedStateEntry name="EquipSlot" type="string" value="Bank" restriction="readonly"/>
+</ObjectTemplate>

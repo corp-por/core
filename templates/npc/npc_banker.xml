@@ -1,0 +1,10 @@
+<ObjectTemplate>
+	<ClientId>253</ClientId>
+	<Name>Bob</Name>
+	<SharedStateEntry name="BodyOffset" type="double" value=".5"/>
+	<SharedStateEntry name="Title" type="string" value="Banker"/>
+	<MobileComponent />
+	<ObjectVariableComponent>
+		<StringVariable Name="DialogPortrait">Chuckles</StringVariable>
+	</ObjectVariableComponent>
+</ObjectTemplate>

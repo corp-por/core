@@ -1,0 +1,5 @@
+<ObjectTemplate>
+  <Name>[0078ff]Leather Backpack[-]</Name>
+	<ClientId>4</ClientId>
+	<SharedStateEntry name="Capacity" type="int" value="40"/>
+</ObjectTemplate>
