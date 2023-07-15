@@ -8,7 +8,7 @@ require 'inc.damage'
 
 -- Do things that should happen on both new objects and from backup (always when first loaded)
 function OnLoad()
-
+	Death.Init(this)
 end
 
 function SetStartingStat(name)

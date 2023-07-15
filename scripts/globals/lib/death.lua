@@ -8,6 +8,10 @@ Death.Stats = {
 	"Health"
 }
 
+function Death.Init(mobileObj)
+	
+end
+
 function Death.Active(mobileObj)
     if ( not mobileObj:IsMobile() and not Var.Has(mobileObj, "Attackable") ) then
 		--LuaDebugCallStack("ERROR: Trying to check IsDead on non mobile.")
