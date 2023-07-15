@@ -2,6 +2,7 @@
 -- Copyright © 2023 Corp Por LTD
 
 require 'commands.god.ui_info'
+require 'commands.god.eventhandles'
 
 -- God commands
 local Include = {}
@@ -15,6 +16,30 @@ Include.access = AccessLevel.God
 
 -- function definitions
 Include.functions = {
+    -- resetworld
+	ResetWorld = function(arg)
+		if(arg and arg:match("force")) then		
+			DestroyAllObjects(false,"WorldReset")
+		else
+			ClientDialog.Show{
+			    TargetUser = this,
+			    DialogId = "ResetWorldDialog",
+			    TitleStr = "Are you sure?",
+			    DescStr = "[$2465]",
+			    Button1Str = "Yes",
+			    Button2Str = "No",
+			    ResponseFunc = function ( user, buttonId )
+					buttonId = tonumber(buttonId)
+					if( buttonId == 0) then
+						DestroyAllObjects(false,"WorldReset")	
+					else
+						this:SystemMessage("World reset cancelled")
+					end
+				end
+			}
+		end
+	end,
+
     -- destroyall
     DestroyAll = function(arg)
         if (arg and arg:match("force")) then
@@ -153,6 +178,7 @@ Include.functions = {
 -- command definitions: { name, function, usage, description, aliases }
 Include.commands = {
     { "backup", Include.functions.ServerBackup, "", "Force a backup to take place." },
+    { "resetworld", Include.functions.ResetWorld, "[force]", "[$2508]" },
     { "destroyall", Include.functions.DestroyAll, "[force|ignorenoreset]", "[$2509]" },
     { "dostring", Include.functions.DoString, "<lua code>", Desc="[$2514]", { "exec" } },
     { "reload", Include.functions.ReloadBehavior, "<behavior>", "[DEBUG COMMAND] Reload the behavior in memory." },
