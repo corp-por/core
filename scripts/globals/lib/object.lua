@@ -9,7 +9,7 @@ Object = {}
 -- @return if newImmovable is not provided, will return true if object is immovable, false otherwise
 function Object.Immovable(object, newImmovable)
     if ( newImmovable ~= nil ) then
-        object:SetSharedObjectPropert("Immovable", newImmovable)
+        object:SetSharedObjectProperty("Immovable", newImmovable)
     else
         return object:GetSharedObjectProperty("Immovable")
     end

@@ -20,7 +20,7 @@ function Death.Active(mobileObj)
 	return mobileObj:GetSharedObjectProperty("IsDead") == true
 end
 
-function Death.Start(mobileObj)
+function Death.Start(mobileObj, finalBlow)
 	for i=0,#Death.Stats do
 		if ( Stat[Death.Stats[i]] ~= nil ) then
 			Stat[Death.Stats[i]].Set(mobileObj, 0)
@@ -28,9 +28,9 @@ function Death.Start(mobileObj)
 	end
 
 	if ( mobileObj:IsPlayer() ) then
-		Death.Player.Start(mobileObj)
+		Death.Player.Start(mobileObj, finalBlow)
 	else
-		Death.Npc.Start(mobileObj)
+		Death.Npc.Start(mobileObj, finalBlow)
 	end
     
     Effect.OnDeath(mobileObj)

@@ -20,7 +20,6 @@ Create.AtLoc = function(template, loc, cb)
     local id = template..uuid()
     RegisterSingleEventHandler(EventType.CreatedObject, id, function(success, obj)
         if ( success ) then
-            Object.Decay(obj)
             Create.OnCreateSuccessHook(obj, template)
         end
         if ( cb ) then cb(success and obj or nil) end
@@ -55,7 +54,6 @@ Create.Custom.AtLoc = function(template, data, loc, cb)
     local id = template..uuid()
     RegisterSingleEventHandler(EventType.CreatedObject, id, function(success, obj)
         if ( success ) then
-            Object.Decay(obj)
             Create.OnCreateSuccessHook(obj, template)
         end
         if ( cb ) then cb(success and obj or nil) end
@@ -67,7 +65,6 @@ Create.Extended.AtLoc = function(template, loc, rot, scale, cb)
     local id = template..uuid()
     RegisterSingleEventHandler(EventType.CreatedObject, id, function(success, obj)
         if ( success ) then
-            Object.Decay(obj)
             Create.OnCreateSuccessHook(obj, template)
         end
         if ( cb ) then cb(success and obj or nil) end
@@ -153,7 +150,6 @@ Create.Stack.AtLoc = function(template, count, loc, cb)
     local id = template..uuid()
     RegisterSingleEventHandler(EventType.CreatedObject, id, function(success, obj)
         if ( success ) then
-            Object.Decay(obj)
             Create.OnCreateSuccessHook(obj, template) 
         end
         if ( cb ) then cb(success and obj or nil) end
@@ -239,7 +235,6 @@ Create.Temp.AtLoc = function(template, loc, cb)
     local id = template..uuid()
     RegisterSingleEventHandler(EventType.CreatedObject, id, function(success, obj)
         if ( success ) then
-            Object.Decay(obj)
             Create.OnCreateSuccessHook(obj, template)
         end
         if ( cb ) then cb(success and obj or nil) end
@@ -256,7 +251,6 @@ Create.CustomTemp.AtLoc = function(template, data, loc, cb)
     local id = template..uuid()
     RegisterSingleEventHandler(EventType.CreatedObject, id, function(success, obj)
         if ( success ) then
-            Object.Decay(obj)
             Create.OnCreateSuccessHook(obj, template)
         end
         if ( cb ) then cb(success and obj or nil) end

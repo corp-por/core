@@ -74,7 +74,7 @@ function OnDamageReceived(from, amount, damageType)
 
 	local newHealth = currentHealth - amount
     if ( newHealth <= 0 ) then
-        Death.Start(this)
+        Death.Start(this, from)
     else
         Action.Taken(this, "Damage", "Apply")
 

@@ -604,7 +604,7 @@ function GetSpiralLoc(index, center, size)
   end
 
   local loc = Loc(x, 50, z)
-  loc:FixY()
+  loc:Fix()
   return loc
 end
 

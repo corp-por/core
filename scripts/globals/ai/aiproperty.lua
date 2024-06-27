@@ -82,7 +82,7 @@ function AIProperty.GenerateLoot(mobileObject, cb)
     local L = AIProperties[template].Loot
 
     if ( #L < 1 ) then
-        DebugMessage("[AIProperty.GenerateLoot] Loot table length less than 1 for template '" .. template .. "'")
+        DebugMessage("[AIProperty.GenerateLoot] Loot table length less than 1 for template '" .. template .. "' Remove Loot entry if this is intended.")
         return
     end
 

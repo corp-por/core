@@ -8,7 +8,7 @@ States.ChargeToLocation = {
     Init = function(self)
         if not( self.ChargeLocation ) then
             self.ChargeLocation = Loc(0,0,0)
-            self.ChargeLocation:FixY()
+            self.ChargeLocation:Fix()
         end
     end,
     ]]

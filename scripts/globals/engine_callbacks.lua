@@ -26,7 +26,7 @@ function GetSpawnPosition(playerObj)
 		loc = spawnPositions[1]:GetLoc()
 	else
 		loc = Loc(0,0,0)
-		loc:FixY()
+		loc:Fix()
 	end
 	return loc
 end

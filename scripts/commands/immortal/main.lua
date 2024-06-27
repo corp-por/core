@@ -33,7 +33,7 @@ Include.functions = {
             if ( success ) then
                 this:RequestClientTargetLoc(this, "TeleportCommand")
                 --if( this:HasLineOfSightToLoc(targetLoc,ServerSettings.Combat.LOSEyeLevel) ) then --IsPassable(targetLoc) ) then
-                if ( IsPassable(targetLoc) ) then
+                if ( targetLoc:Fix() ) then
                     this:SetWorldPosition(targetLoc)
                     this:PlayEffect("TeleportToEffect")
                 else
@@ -65,7 +65,7 @@ Include.functions = {
             z = tonumber(z)
         end
         local loc = Loc(x,y,z)
-        loc:FixY()
+        loc:Fix()
         this:SetWorldPosition(loc)
     end
 }

@@ -14,7 +14,8 @@ function BuildTargetElement(playerObj,targetObj)
 
 	local dynWindow = DynamicWindow("Target","",width,height,880,40,"Transparent","TopLeft",-1,"always")	
 	
-	dynWindow:AddPortrait(0,0,154,193,targetObj,"head_static")
+	-- this is disabled for now, a bit of a performance hog
+	--dynWindow:AddPortrait(0,0,154,193,targetObj,"head_static")
 
 	local modifiedName = StripColorFromString(targetObj:GetName())
 	if(not(modifiedName) or modifiedName == "") then

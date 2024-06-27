@@ -42,11 +42,6 @@ function DoInfo(target)
     newWindow:AddLabel(200, 70, "[F3F781]Color: [-]"..tostring(curInfoObj:GetColor()),600,0,18,"left",false)
   
     newWindow:AddButton(320, 10, "Refresh", "Refresh", 80, 23, "", "", false,"")
- 
- 	local assetBundle = curInfoObj:GetAssetBundleName()
- 	if(assetBundle ~= "") then
- 		newWindow:AddLabel(295, 70, "[F3F781]Bundle: [-]".. assetBundle, 600,0,18,"left",false)
- 	end
 
   	if curInfoObj:IsMobile() then
         newWindow:AddLabel(20, 85, "[F3F781]Scale: [-]"..string.format("%4.2f",curInfoObj:GetScale().X),600,0,18,"left",false)

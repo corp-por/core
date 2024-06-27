@@ -126,14 +126,18 @@ RegisterEventHandler(EventType.ClientTargetLocResponse, "createTemplateAt",
 
         if(createAmount > 1 ) then
             if( GetTemplateObjVar(templateId,"ResourceType") ~= nil) then
-                Create.Stack.AtLoc(templateId, amount, targetLoc)
+                Create.Stack.AtLoc(templateId, amount, targetLoc, function(obj)
+					if not( obj:IsMobile() ) then
+						Object.Decay(obj)
+					end
+				end)
             else
 				for i=1,createAmount do
 					local spawnLoc = GetNearbyPassableLocFromLoc(targetLoc,1,5)
 					if(spawnLoc ~= nil) then
                         Create.AtLoc(templateId, spawnLoc, function(obj)
-                            if ( obj:IsMobile() ) then
-                                obj:RemoveDecay()
+                            if not( obj:IsMobile() ) then
+								Object.Decay(obj)
                             end
                         end)
 					end
@@ -141,8 +145,8 @@ RegisterEventHandler(EventType.ClientTargetLocResponse, "createTemplateAt",
 			end
 		else
             Create.Stack.AtLoc(templateId, nil, targetLoc, function(obj)
-                if ( obj:IsMobile() ) then
-                    obj:RemoveDecay()
+                if not( obj:IsMobile() ) then
+					Object.Decay(obj)
                 end
             end)
 		end
