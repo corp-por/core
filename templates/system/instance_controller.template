@@ -1,0 +1,6 @@
+{
+	ClientId = 0,
+	Name = "Instance Controller",
+	Tag = "ClusterController",
+	Attach = "controllers.instance"
+}

@@ -16,12 +16,12 @@ if ( Backpack.Get(this) == nil ) then
     local templateData = GetTemplateData(template)
     templateData.Name = this:GetName()
 
-    if not( templateData.SharedObjectProperties ) then
-		templateData.SharedObjectProperties = {}
+    if not( templateData.SharedProperties ) then
+		templateData.SharedProperties = {}
 	end
 
     -- set a custom capacity for this temporary loot container (minimum of 5 to not look too odd)
-    templateData.SharedObjectProperties.Capacity = 5
+    templateData.SharedProperties.Capacity = 5
 
     Create.Custom.InContainer(template, templateData, this, nil, function(obj)
         if ( obj ~= nil ) then

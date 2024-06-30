@@ -1,0 +1,5 @@
+{
+	Name = "New Player Spawn Position",
+	Tag = "SpawnPosition",
+	ClientId = 0
+}

@@ -1,0 +1,8 @@
+{
+	ClientId = 236,
+	Name = "Pather",
+	Mobile = {
+		MovementSpeed = 4,
+	},
+	Attach = "test.pather"
+}

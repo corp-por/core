@@ -28,7 +28,7 @@ function FSM(parentObj, states, pulseRate, sleepDelay)
         CurrentTarget = nil,
         AllowSleeping = true,
         PreviousStateIndex = 1,
-        Template = Object.Template(parentObj),
+        Template = Object.TemplateId(parentObj),
         Debug = false
     }
   

@@ -130,9 +130,9 @@ end
 --- @param targetObj | Ths mobile to find the interaction range
 --- @return range or nil if no range specified.
 function Interaction.GetInteractionRange(targetObj)
-	local template = Object.Template(targetObj)
-	if ( ItemProperties[template] ~= nil and ItemProperties[template].InteractionRange ~= nil ) then
-		return ItemProperties[template].InteractionRange
+	local templateid = Object.TemplateId(targetObj)
+	if ( Template[templateid] ~= nil and Template[templateid].InteractionRange ~= nil ) then
+		return Template[templateid].InteractionRange
 	end
 	return nil
 end
@@ -140,20 +140,20 @@ end
 --- Will 'use' an item and apply any effects or abilities, does NOT perform checks!
 --- @param mobileObj | The mobile (usually a player) using the object
 --- @param targetObj | The object being used
---- @param template
+--- @param templateid
 function Interaction.Use(mobileObj, targetObj)
-	local template = Object.Template(targetObj)
+	local templateid = Object.TemplateId(targetObj)
 
 	-- run the onuse hook if it exists
-	if ( ItemProperties[template] and ItemProperties[template].OnUse ~= nil ) then
-		ItemProperties[template].OnUse(targetObj, mobileObj)
+	if ( Template[templateid] and Template[templateid].OnUse ~= nil ) then
+		Template[templateid].OnUse(targetObj, mobileObj)
 	end
 
-	if ( ItemProperties[template] and ItemProperties[template].Effect ) then
-		local args = ItemProperties[template].EffectArgs or {}
+	if ( Template[templateid] and Template[templateid].Effect ) then
+		local args = Template[templateid].EffectArgs or {}
 		args.Interacted = targetObj
-		if ( Effect.Apply(mobileObj, ItemProperties[template].Effect, args) ) then
-			if ( ItemProperties[template].Consume == true ) then
+		if ( Effect.Apply(mobileObj, Template[templateid].Effect, args) ) then
+			if ( Template[templateid].Consume == true ) then
 				args.Interacted = nil
 				if ( Stackable.Is(targetObj) ) then
 					Stackable.Adjust(targetObj, -1)
@@ -162,8 +162,8 @@ function Interaction.Use(mobileObj, targetObj)
 				end
 			end
 		end
-	elseif ( ItemProperties[template] and ItemProperties[template].Ability ) then
-		Ability.Perform(mobileObj, nil, ItemProperties[template].Ability, false, ItemProperties[template].Consume == true and targetObj or nil)
+	elseif ( Template[templateid] and Template[templateid].Ability ) then
+		Ability.Perform(mobileObj, nil, Template[templateid].Ability, false, Template[templateid].Consume == true and targetObj or nil)
 	end
 end
 

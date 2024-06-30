@@ -29,13 +29,21 @@ function Object.Decay(object, timespan)
 	object:ScheduleDecay(timespan)
 end
 
---- Get an object's template (preferred as the template id is cached in lua memory)
+--- Get an object's template id (preferred as the template id is cached in lua memory)
 -- @param object - gameObject
 local _templateIdCache = {}
-function Object.Template(object)
+function Object.TemplateId(object)
     if ( object == nil ) then return nil end
     if ( _templateIdCache[object] == nil ) then
         _templateIdCache[object] = object:GetCreationTemplateId()
     end
     return _templateIdCache[object]
+end
+
+-- return a table copy of the template data for a given template id
+function GetTemplateData(templateId)
+    if ( _G.Template[templateId] ~= nil ) then
+        return deepcopy(_G.Template[templateId])
+    end
+    return nil
 end

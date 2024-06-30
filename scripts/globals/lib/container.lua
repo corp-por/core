@@ -10,7 +10,7 @@ Container = {}
 --- @param mobileObj | mobile/player doing the adding
 --- @return bool
 function Container.Behavior(name, containerObj, mobileObj, ...)
-    local behavior = ContainerBehavior[Object.Template(containerObj)]
+    local behavior = ContainerBehavior[Object.TemplateId(containerObj)]
     if ( behavior == nil or behavior[name] == nil ) then
         behavior = ContainerBehavior.default
     end
@@ -124,7 +124,7 @@ function Container.TryAdd(containerObj, addingObj, addingLocation)
     end
 
     -- if it's gold, destroy the item and add it to gold total
-    if ( Object.Template(addingObj) == "gold" ) then
+    if ( Object.TemplateId(addingObj) == "gold" ) then
         local topMost = containerObj:TopmostContainer()
         if ( IsPlayerCharacter(topMost) ) then
             local total = Stackable.GetCount(addingObj)

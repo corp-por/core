@@ -1,0 +1,8 @@
+{
+	Name = "[0078ff]Bank Box[-]",
+	ClientId = 138,
+	SharedProperties = {
+		Capacity = 30,
+		EquipSlot = "Bank"
+	}
+}

@@ -14,14 +14,14 @@ end
 --- Searches for a single object contained within the specified object by creation template id (NOT RECURSIVE!)
 -- NOTE: If multiple items match, it just returns the first one it finds
 -- @param containerObj 
--- @param template template id to search for
+-- @param templateid template id to search for
 -- @return match object (nil if not found)
-function FindItemInContainerByTemplate(contObj, template)
+function FindItemInContainerByTemplate(contObj, templateid)
 	if( not(contObj) or not(contObj:IsContainer()) ) then return nil end
 
 	local contents = contObj:GetContainedObjects()
 	for i=1,#contents do
-		if ( Object.Template(contents[i]) == template ) then
+		if ( Object.TemplateId(contents[i]) == templateid ) then
 			return containedObj		
 		end
 	end
@@ -46,11 +46,11 @@ end
 --- Searches for a single object contained within the specified object by creation template id (recursively)
 -- NOTE: If multiple items match, it just returns the first one it finds
 -- @param containerObj 
--- @param template template id to search for
+-- @param templateid template id to search for
 -- @return match object (nil if not found)
-function FindItemInContainerByTemplateRecursive(contObj,template)
+function FindItemInContainerByTemplateRecursive(contObj,templateid)
 	return FindItemInContainerRecursive(contObj, function(containedItem)
-		return Object.Template(containedItem) == template
+		return Object.TemplateId(containedItem) == templateid
 	end)
 end
 
@@ -77,11 +77,11 @@ end
 
 --- Searches for objects contained within the specified object by creation template id (recursively)
 -- @param containerObj 
--- @param template template id to search for
+-- @param templateid template id to search for
 -- @return array of matching objects
-function FindItemsInContainerByTemplateRecursive(contObj,template)
+function FindItemsInContainerByTemplateRecursive(contObj,templateid)
 	return FindItemsInContainerRecursive(contObj, function(objRef)
-		return Object.Template(objRef) == template
+		return Object.TemplateId(objRef) == templateid
 	end)
 end
 

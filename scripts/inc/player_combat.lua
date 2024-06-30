@@ -334,9 +334,9 @@ function ExecuteMissAction(atTarget)
 end
 
 function CalculateHitDamage(targetObj)
-	local damage = Weapon.ObserveDamage(m_weapon.Template)
+	local damage = Weapon.ObserveDamage(m_weapon.TemplateId)
 	if ( m_offhand.Object ~= nil ) then
-		damage = damage * Weapon.ObserveDamage(m_offhand.Template)
+		damage = damage * Weapon.ObserveDamage(m_offhand.TemplateId)
 	end
 	return damage
 end
@@ -344,7 +344,7 @@ end
 --- This comes after a successful (hitchance) ExecuteWeaponAttack, and applies the weapon damage
 -- @param targetObj mobileObj target to execute the hit action against
 function ExecuteHitAction(targetObj)
-	Equipment.PlayImpactSound(targetObj, m_weapon.Template)
+	Equipment.PlayImpactSound(targetObj, m_weapon.TemplateId)
 	local damage = Modify.Apply(this, string.format("%sTo", m_weapon.DamageType), CalculateHitDamage(targetObj))
     targetObj:SendMessage("Damage", this, damage, m_weapon.DamageType)
 end
@@ -683,7 +683,7 @@ RegisterEventHandler(EventType.ItemUnequipped, "", function(item)
     if ( slot == "RightHand" or slot == "LeftHand" ) then
         -- delete the view if it exists
         if ( _primed ) then
-            DelView("AttackRange", hand)
+            DelView("AttackRange")
             _primed = nil
         end
 

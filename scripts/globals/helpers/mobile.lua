@@ -59,7 +59,7 @@ function GetBodySize(target)
 	if ( target ~= nil and target:IsMobile() ) then
 		local bodyOffset = target:GetSharedObjectProperty("BodyOffset")
 		if not( bodyOffset ) then
-			DebugMessage("ERROR: Mobile has no body offset! "..tostring(Object.Template(target)))
+			DebugMessage("ERROR: Mobile has no body offset! "..tostring(Object.TemplateId(target)))
 			return ServerSettings.Interaction.DefaultBodySize
 		else
 			return bodyOffset * target:GetScale().X
@@ -73,9 +73,9 @@ function GetBodySize(target)
 	end
 end
 
-function LoadEquipment(mobileObj,initializer)
-    if ( initializer ~= nil and initializer.Equipment ~= nil ) then
-        for slot,template in pairs(initializer.Equipment) do
+function LoadEquipment(mobileObj,table)
+    if ( table ~= nil and table.Equipment ~= nil ) then
+        for slot,template in pairs(table.Equipment) do
             if ( type(template) == 'table' ) then
                 Create.Equipped(template[math.random(1,#template)], mobileObj)
             else
@@ -85,10 +85,10 @@ function LoadEquipment(mobileObj,initializer)
     end
 end
 
-function LoadDNA(mobileObj,initializer)
-	if ( initializer and initializer.DNA ~= nil ) then
+function LoadDNA(mobileObj,table)
+	if ( table and table.DNA ~= nil ) then
 	    local dnaString = ""
-	    for i,dnaEntry in pairs(initializer.DNA) do
+	    for i,dnaEntry in pairs(table.DNA) do
 	        if(type(dnaEntry) == "table") then
 	            dnaString = dnaString .. dnaEntry[math.random(#dnaEntry)] .. ";"
 	        else

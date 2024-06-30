@@ -6,7 +6,7 @@
 --- but the data is read from a lot.
 m_weapon = {
 	Object = nil,
-	Template = nil,
+	TemplateId = nil,
     IsRanged = false,
     IsStaff = false,
     Range = Weapon.GetRange(nil),
@@ -16,7 +16,7 @@ m_weapon = {
 
 m_offhand = {
 	Object = nil,
-	Template = nil,
+	TemplateId = nil,
 	Speed = nil,
 	IsShield = false,
 }
@@ -28,19 +28,19 @@ m_swingOffhand = false
 function UpdateWeapon(weaponObj, offhand)
 	if ( offhand ) then
 		m_offhand.Object = weaponObj
-		m_offhand.Template = Object.Template(weaponObj)
-		m_offhand.Speed = Weapon.GetSpeed(m_offhand.Template)
-		m_offhand.IsShield = Weapon.IsShield(m_offhand.Template)
-		m_offhand.DamageType = Weapon.GetDamageType(m_offhand.Template)
+		m_offhand.TemplateId = Object.TemplateId(weaponObj)
+		m_offhand.Speed = Weapon.GetSpeed(m_offhand.TemplateId)
+		m_offhand.IsShield = Weapon.IsShield(m_offhand.TemplateId)
+		m_offhand.DamageType = Weapon.GetDamageType(m_offhand.TemplateId)
 	else
 		m_weapon.Object = weaponObj
-		m_weapon.Template = Object.Template(weaponObj)
-		m_weapon.IsRanged = Weapon.IsRanged(m_weapon.Template)
-		m_weapon.IsStaff = not m_weapon.IsRanged and Weapon.IsStaff(m_weapon.Template)
-		m_weapon.Range = Weapon.GetRange(m_weapon.Template)
-		m_weapon.Speed = Weapon.GetSpeed(m_weapon.Template)
-		m_weapon.IsTwoHanded = Weapon.IsTwoHanded(m_weapon.Template)
-		m_weapon.DamageType = Weapon.GetDamageType(m_weapon.Template)
+		m_weapon.TemplateId = Object.TemplateId(weaponObj)
+		m_weapon.IsRanged = Weapon.IsRanged(m_weapon.TemplateId)
+		m_weapon.IsStaff = not m_weapon.IsRanged and Weapon.IsStaff(m_weapon.TemplateId)
+		m_weapon.Range = Weapon.GetRange(m_weapon.TemplateId)
+		m_weapon.Speed = Weapon.GetSpeed(m_weapon.TemplateId)
+		m_weapon.IsTwoHanded = Weapon.IsTwoHanded(m_weapon.TemplateId)
+		m_weapon.DamageType = Weapon.GetDamageType(m_weapon.TemplateId)
 	end
     
 	m_swingOffhand = false

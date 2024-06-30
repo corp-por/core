@@ -11,55 +11,31 @@ function OnLoad()
 	Death.Init(this)
 end
 
-function SetStartingStat(name)
+function SetStartingStat(name, template)
     local val = 1
-    if ( initializer ~= nil and initializer.Stats ~= nil and initializer.Stats[name] ) then
-        val = initializer.Stats[name]
-    else
-        local template = Object.Template(this)
-        if (
-            AIProperties[template] ~= nil
-            and
-            AIProperties[template].Stats ~= nil
-            and
-            AIProperties[template].Stats[name] ~= nil
-        ) then
-            val = AIProperties[template].Stats[name]
-        end
+    --local template = Template[Object.TemplateId(this)] --Object.TemplateId(this)
+    if ( template ~= nil and template.Stats ~= nil and template.Stats[name] ~= nil ) then
+        val = template.Stats[name]
     end
     Stat[name].SetMax(this, val)
     Stat[name].Set(this, val)
 end
 
-function SetStartingSpeed()
-    local template = Object.Template(this)
-    if (
-        AIProperties[template] ~= nil
-        and
-        AIProperties[template].BaseMoveSpeed ~= nil
-    ) then
-        this:SetBaseMoveSpeed(AIProperties[template].BaseMoveSpeed)
-    else
-        this:SetBaseMoveSpeed(ServerSettings.Stats.BaseMoveSpeed)
-    end
-end
-
 -- Do things that should happen when the mobile object is first created
 function OnModuleAttached()
+    local t = Template[Object.TemplateId(this)]
+
     -- create initial equipment (if any))
-    LoadEquipment(this,initializer)
+    LoadEquipment(this,t)
 
     -- or dna string (if any)
-    LoadDNA(this,initializer)
+    LoadDNA(this,t)
 
     -- setup initial stats
     ForeachStat(function(name)
         Stat[name].Init(this)
-        SetStartingStat(name)
+        SetStartingStat(name, t)
     end)
-
-    -- set the starting speed
-    SetStartingSpeed()
 
     OnLoad()
 end

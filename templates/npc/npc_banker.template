@@ -1,7 +1,16 @@
--- SPDX-License-Identifier: AGPL-3.0-only
--- Copyright © 2023 Corp Por LTD
+{
+	ClientId = 253,
+	Name = "Bob",
+	SharedProperties = {
+		BodyOffset = 0.5,
+		Title = "Banker"
+	},
+	Mobile = {},
+	ObjVars = {
+		DialogPortrait = "Chuckles"
+	},
 
-ItemProperties.npc_banker = {
+	
     -- define this property to signal this object can be interacted within the world (doesn't require being in a container)
     InteractionRange = ServerSettings.Interaction.ObjectInteractionRange,
     -- define what happens when 'used' (interacted with)

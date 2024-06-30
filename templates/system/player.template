@@ -1,0 +1,11 @@
+{
+	TemplateName = "Player",
+	ClientId = 1,
+	Mobile = {
+		MobileType = "Player"
+	},
+	Attach = "player",
+	Stats = {
+		Health = 100,
+	}
+}

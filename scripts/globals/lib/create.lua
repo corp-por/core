@@ -157,9 +157,9 @@ Create.Stack.AtLoc = function(template, count, loc, cb)
     
     -- set the stack count before creating
     local templateData = GetTemplateData(template)
-    if ( templateData.SharedObjectProperties == nil ) then templateData.SharedObjectProperties = {} end
-    if ( templateData.SharedObjectProperties.StackCount == nil or templateData.SharedObjectProperties.StackCount < 1 ) then
-        templateData.SharedObjectProperties.StackCount = count
+    if ( templateData.SharedProperties == nil ) then templateData.SharedProperties = {} end
+    if ( templateData.SharedProperties.StackCount == nil or templateData.SharedProperties.StackCount < 1 ) then
+        templateData.SharedProperties.StackCount = count
     end
 
     CreateCustomObj(template, templateData, loc, id)
@@ -204,9 +204,9 @@ Create.Stack.InContainer = function(template, container, count, containerloc, cb
     end)
     
     -- set the stack count before creating
-    if ( templateData.SharedObjectProperties == nil ) then templateData.SharedObjectProperties = {} end
-    if ( templateData.SharedObjectProperties.StackCount == nil or templateData.SharedObjectProperties.StackCount < 1 ) then
-        templateData.SharedObjectProperties.StackCount = count
+    if ( templateData.SharedProperties == nil ) then templateData.SharedProperties = {} end
+    if ( templateData.SharedProperties.StackCount == nil or templateData.SharedProperties.StackCount < 1 ) then
+        templateData.SharedProperties.StackCount = count
     end
 
     CreateCustomObjInContainer(template, templateData, container, containerloc, id)

@@ -9,7 +9,7 @@ if ( Backpack.Get(this) == nil ) then
 
     templateData.Name = "Vendor Inventory"
 
-    templateData.LuaModules = { "vendor.inventory" }
+    templateData.Attach = "vendor.inventory"
 
     Create.Custom.InContainer("vendor_backpack", templateData, this, nil, function(backpack)
         this:EquipObject(backpack)

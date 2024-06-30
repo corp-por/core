@@ -88,5 +88,5 @@ function IsPlayerCorpse(target)
 		LuaDebugCallStack("[IsPlayerCorpse] nil target provided.")
 		return false
 	end
-	return Object.Template(target) == "player_corpse"
+	return Object.TemplateId(target) == "player_corpse"
 end

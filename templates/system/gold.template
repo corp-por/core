@@ -1,0 +1,6 @@
+{
+	Name = "Gold",
+	ClientId = 9,
+	
+    Stackable = true,
+}

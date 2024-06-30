@@ -5,8 +5,8 @@
 
 Stackable = {}
 
-function Stackable.Is(item, template, skipChecks)
-    if not( template ) then
+function Stackable.Is(item, templateid, skipChecks)
+    if not( templateid ) then
         if not( skipChecks ) then
             if not( item ) then
                 LuaDebugCallStack("[Stackable.Is] item not provided.")
@@ -17,14 +17,14 @@ function Stackable.Is(item, template, skipChecks)
                 return false
             end
         end
-        template = Object.Template(item)
+        templateid = Object.TemplateId(item)
     end
-    if not( template ) then return false end
-    return ItemProperties[template] and ItemProperties[template].Stackable
+    if not( templateid ) then return false end
+    return Template[templateid] and Template[templateid].Stackable
 end
 
-function Stackable.Combinable(item, template, skipChecks)
-    if not( template ) then
+function Stackable.Combinable(item, templateid, skipChecks)
+    if not( templateid ) then
         if not( skipChecks ) then
             if not( item ) then
                 LuaDebugCallStack("[Stackable.Is] item not provided.")
@@ -35,10 +35,10 @@ function Stackable.Combinable(item, template, skipChecks)
                 return false
             end
         end
-        template = Object.Template(item)
+        templateid = Object.TemplateId(item)
     end
-    if not( template ) then return false end
-    return ItemProperties[template] and ItemProperties[template].Combinable
+    if not( templateid ) then return false end
+    return Template[templateid] and Template[templateid].Combinable
 end
 
 function Stackable.GetCount(item, skipChecks)
@@ -117,11 +117,11 @@ function Stackable.CanStack(item, otherObj, skipChecks)
             return false
         end
     end
-    local template = Object.Template(item)
-    if ( not ItemProperties[template] or not ItemProperties[template].Combinable ) then return false end
+    local templateid = Object.TemplateId(item)
+    if ( not Template[templateid] or not Template[templateid].Combinable ) then return false end
     if not( Stackable.Is(item, nil, true) ) then return false end
     if not( Stackable.Is(otherObj, nil, true) ) then return false end
-    return template == Object.Template(otherObj)
+    return templateid == Object.TemplateId(otherObj)
 end
 
 function Stackable.Combine(item, otherObj)

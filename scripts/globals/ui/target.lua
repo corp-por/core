@@ -19,7 +19,7 @@ function BuildTargetElement(playerObj,targetObj)
 
 	local modifiedName = StripColorFromString(targetObj:GetName())
 	if(not(modifiedName) or modifiedName == "") then
-		modifiedName = Object.Template(targetObj)
+		modifiedName = Object.TemplateId(targetObj)
 	end
 
 	dynWindow:AddStatBar(

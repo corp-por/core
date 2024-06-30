@@ -1,0 +1,7 @@
+{
+	Name = "[0078ff]Leather Backpack[-]",
+	ClientId = 4,
+	SharedProperties = {
+		Capacity = 40
+	}
+}

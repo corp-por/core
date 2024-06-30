@@ -25,7 +25,7 @@ function Vendor.NPC.Restock(vendor, inventory)
         return
     end
 
-    local template = Object.Template(vendor)
+    local template = Object.TemplateId(vendor)
 
     -- no restock necessary
     if ( Vendor.Stock[template] == nil ) then return end
@@ -36,7 +36,7 @@ function Vendor.NPC.Restock(vendor, inventory)
     local objs = inventory:GetContainedObjects()
     for i=1,#restock do
         for ii=1,#objs do
-            if ( restock[i].Template == Object.Template(objs[ii]) ) then
+            if ( restock[i].Template == Object.TemplateId(objs[ii]) ) then
                 skip[restock[i].Template] = true
             end
         end
@@ -57,7 +57,7 @@ end
 function Vendor.GetPriceList(vendor)
     local price_list = Var.Get(vendor, "PriceList")
     if ( price_list == nil ) then
-        local vendor_template = Object.Template(vendor)
+        local vendor_template = Object.TemplateId(vendor)
         if ( restockPriceList[vendor_template] ) then
             return restockPriceList[vendor_template]
         end
@@ -74,7 +74,7 @@ function Vendor.GetPrice(vendor, object, price_list)
     end
 
     if ( price_list ) then
-        local template = Object.Template(object)
+        local template = Object.TemplateId(object)
         if ( price_list[template] ) then
             return price_list[template]
         end

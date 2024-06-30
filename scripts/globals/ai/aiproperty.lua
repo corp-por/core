@@ -3,53 +3,53 @@
 
 AIProperty = {}
 
-function AIProperty.GetTable(template)
-    if ( AIProperties[template] ~= nil ) then
-        return AIProperties[template]
+function AIProperty.GetTable(templateid)
+    if ( Template[templateid] ~= nil ) then
+        return Template[templateid]
     end
     return nil
 end
 
 --- Get the TeamType of a brain/ai, this is what determines friendly/foe. This is automatically set when using a new FSM
--- @param template - The Template of the mobileObj running the AI
+-- @param templateid - The TemplateId of the mobileObj running the AI
 -- @return string - The team type, "Unknown" is returned if not set
-function AIProperty.GetTeamType(template)
-    if ( template ~= nil and AIProperties[template] ~= nil and AIProperties[template].TeamType ~= nil ) then
-        return AIProperties[template].TeamType
+function AIProperty.GetTeamType(templateid)
+    if ( templateid ~= nil and Template[templateid] ~= nil and Template[templateid].TeamType ~= nil ) then
+        return Template[templateid].TeamType
     end
     return "Unknown"
 end
 
 --- Get the abilities this mobile can perform
--- @param template - The template of the mobileObj running the AI
+-- @param templateid - The TemplateId of the mobileObj running the AI
 -- @return table - table of abilities, otherwise nil
-function AIProperty.GetAbilities(template)
-    if ( template ~= nil and AIProperties[template] ~= nil and AIProperties[template].Abilities ~= nil ) then
-        return AIProperties[template].Abilities
+function AIProperty.GetAbilities(templateid)
+    if ( templateid ~= nil and Template[templateid] ~= nil and Template[templateid].Abilities ~= nil ) then
+        return Template[templateid].Abilities
     end
     return nil
 end
 
 --- Gets the path and if should loop
--- @param template - The Template of the mobileObj running the AI
+-- @param templateid - The TemplateId of the mobileObj running the AI
 -- @return string,bool - First return is the path name, second return is if the path should loop
-function AIProperty.GetPath(template)
-    if ( template ~= nil and AIProperties[template] ~= nil and AIProperties[template].Path ~= nil ) then
-        return AIProperties[template].Path, AIProperties[template].PathLoop == true
+function AIProperty.GetPath(templateid)
+    if ( templateid ~= nil and Template[templateid] ~= nil and Template[templateid].Path ~= nil ) then
+        return Template[templateid].Path, Template[templateid].PathLoop == true
     end
     return nil, false
 end
 
-function AIProperty.GetRespawnTimer(template)
-    if ( template ~= nil and AIProperties[template] ~= nil and AIProperties[template].RespawnTimer ~= nil ) then
-        return AIProperties[template].RespawnTimer
+function AIProperty.GetRespawnTimer(templateid)
+    if ( templateid ~= nil and Template[templateid] ~= nil and Template[templateid].RespawnTimer ~= nil ) then
+        return Template[templateid].RespawnTimer
     end
     return nil
 end
 
-function AIProperty.GetMovementSpeed(template)
-    if ( template ~= nil and AIProperties[template] ~= nil and AIProperties[template].RespawnTimer ~= nil ) then
-        return AIProperties[template].MovementSpeed
+function AIProperty.GetMovementSpeed(templateid)
+    if ( templateid ~= nil and Template[templateid] ~= nil and Template[templateid].Mobile ~= nil and Template[templateid].Mobile.MovementSpeed ~= nil ) then
+        return Template[templateid].Mobile.MovementSpeed
     end
     return nil
 end
@@ -65,9 +65,9 @@ function AIProperty.GenerateLoot(mobileObject, cb)
         return
     end
 
-    local template = Object.Template(mobileObject)
+    local templateid = Object.TemplateId(mobileObject)
 
-    if ( AIProperties[template] == nil or AIProperties[template].Loot == nil ) then
+    if ( Template[templateid] == nil or Template[templateid].Loot == nil ) then
         return
     end
 
@@ -79,10 +79,10 @@ function AIProperty.GenerateLoot(mobileObject, cb)
 
     backpack = nil
 
-    local L = AIProperties[template].Loot
+    local L = Template[templateid].Loot
 
     if ( #L < 1 ) then
-        DebugMessage("[AIProperty.GenerateLoot] Loot table length less than 1 for template '" .. template .. "' Remove Loot entry if this is intended.")
+        DebugMessage("[AIProperty.GenerateLoot] Loot table length less than 1 for templateid '" .. templateid .. "' Remove Loot entry if this is intended.")
         return
     end
 
@@ -92,12 +92,12 @@ function AIProperty.GenerateLoot(mobileObject, cb)
 
     templateData.Name = mobileObject:GetName()
 
-    if not( templateData.SharedObjectProperties ) then
-		templateData.SharedObjectProperties = {}
+    if not( templateData.SharedProperties ) then
+		templateData.SharedProperties = {}
 	end
 
     -- set a custom capacity for this temporary loot container (minimum of 5 to not look too odd)
-    templateData.SharedObjectProperties.Capacity = #L > 5 and #L or 5
+    templateData.SharedProperties.Capacity = #L > 5 and #L or 5
 
     Create.Custom.InContainer("mob_loot", templateData, mobileObject, Loc(0,1,0), function(container)
         mobileObject:EquipObject(container)

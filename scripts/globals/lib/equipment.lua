@@ -54,18 +54,18 @@ function Equipment.Equip(targetObj, equipObj, equipperObj)
 				if ( oppositeHand ~= nil ) then
 					local unequipOpposite = false
 					-- if the other hand is a 2hander
-					if ( Weapon.IsTwoHanded(Object.Template(oppositeHand)) ) then
+					if ( Weapon.IsTwoHanded(Object.TemplateId(oppositeHand)) ) then
 						-- allow some stuff to stay equipped with 2 handers
-						if ( Weapon.CanBeEquippedWithTwoHandedWeapon(Object.Template(equipObj)) ) then
+						if ( Weapon.CanBeEquippedWithTwoHandedWeapon(Object.TemplateId(equipObj)) ) then
 							unequipOpposite = false
 						else
 							unequipOpposite = true
 						end
 					end
 					-- if we are equipping a 2hander
-					if ( Weapon.IsTwoHanded(Object.Template(equipObj)) ) then
+					if ( Weapon.IsTwoHanded(Object.TemplateId(equipObj)) ) then
 						-- allow some stuff to stay equipped with 2 handers
-						if ( Weapon.CanBeEquippedWithTwoHandedWeapon(Object.Template(oppositeHand)) ) then
+						if ( Weapon.CanBeEquippedWithTwoHandedWeapon(Object.TemplateId(oppositeHand)) ) then
 							unequipOpposite = false
 						else
 							unequipOpposite = true

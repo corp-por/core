@@ -42,6 +42,6 @@ end
 -- @param weaponTemplate(optional) string Defaults to nil (bare hands)
 -- @return distance to consider attacker close enough to defender for combat
 function Combat.GetWeaponRange(attacker, defender, weaponTemplate)
-	weaponTemplate = weaponType or Object.Template(Weapon.GetPrimary(attacker))
+	weaponTemplate = weaponType or Object.TemplateId(Weapon.GetPrimary(attacker))
 	return Combat.GetRange(attacker, defender, Weapon.GetRange(weaponTemplate))
 end
