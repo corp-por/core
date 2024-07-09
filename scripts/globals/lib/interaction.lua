@@ -155,7 +155,7 @@ function Interaction.Use(mobileObj, targetObj)
 		if ( Effect.Apply(mobileObj, Template[templateid].Effect, args) ) then
 			if ( Template[templateid].Consume == true ) then
 				args.Interacted = nil
-				if ( Stackable.Is(targetObj) ) then
+				if ( Stackable.Is(templateid) ) then
 					Stackable.Adjust(targetObj, -1)
 				else
 					targetObj:Destroy()
@@ -233,14 +233,22 @@ function Interaction.TryPickup(playerObj, pickedUpObject, directlyToBackpack)
 
     if ( directlyToBackpack ~= true ) then
 		local topMost = pickedUpObject:TopmostContainer()
-		-- prefer a mobile's backpack over the mobile itself
-		topMost = Backpack.Get(topMost) or topMost
-		-- defer to the container behavior
-		if not( Container.Behavior("Remove", topMost, playerObj) ) then
-			return false
+		if ( topMost ~= nil ) then
+			-- prefer a mobile's backpack over the mobile itself
+			topMost = Backpack.Get(topMost) or topMost
+			-- defer to the container behavior
+			if not( Container.Behavior("Remove", topMost, playerObj) ) then
+				return false
+			end
 		end
         -- pick it up into cursor
+        local loc = pickedUpObject:GetLoc()
         success, reason = Container.TryAdd(playerObj, pickedUpObject, Loc(0,0,0))
+		-- if it was picked up in the world
+		if ( success and topMost == nil ) then
+            Interaction.LookAtLoc(playerObj, loc)
+            playerObj:PlayAnimation("pickup")
+		end
     else
         -- move it to the backpack
         local loc = pickedUpObject:GetLoc()
@@ -262,9 +270,18 @@ function Interaction.TryPickup(playerObj, pickedUpObject, directlyToBackpack)
 	return true
 end
 
---- First check to see if we can drop then perform the actual drop
+--- Undo a pickup (attempt to put back whatever the player is currently 'holding' in their cursor from the place it came from)
 --- @param playerObj
---- @param object to drop
+--- @param notInWorld when true, will not undo a pick unless that undo results into a container
+function Interaction.UndoPickup(playerObj, notInWorld)
+	playerObj:SendMessage("UndoPickup", notInWorld)
+end
+
+--- First check to see if we can drop then perform the actual drop
+--- @param mobileObj the mobile object that is attempting the drop, normally a player
+--- @param droppedObject the object that is being attempted to be dropped
+--- @param dropLocation the location the item is being dropped
+--- @param dropObject the object that is being dropped onto (if any)
 --- @return true if picked up, false if not able to pick up
 function Interaction.TryDrop(mobileObj, droppedObject, dropLocation, dropObject)
 	-- Make sure this is the item the mobile is carrying

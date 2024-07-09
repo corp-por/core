@@ -4,50 +4,50 @@
 3	Prefabs/TradeObject
 4	Prefabs/WorldObjects/Equipment/BackpackObject
 5	Prefabs/WorldObjects/Equipment/SwordLObject
-6	Prefabs/TerrainModificationObject
+6	
 7	Prefabs/WorldObjects/Equipment/SwordObject
-8	Prefabs/WorldObjects/Trees/TreeBirch1Object
+8	
 9	Prefabs/WorldObjects/Resources/CoinsObject
-10	Prefabs/WorldObjects/Trees/TreeBirch3Object
-11	Prefabs/WorldObjects/Trees/TreeBirchSmallObject
-12	Prefabs/WorldObjects/Trees/TreeBirchDeadObject
-13	Prefabs/WorldObjects/Trees/TreePine1Object
-14	Prefabs/WorldObjects/Trees/TreePine2Object
-15	Prefabs/WorldObjects/Trees/TreePineLarge1Object
-16	Prefabs/WorldObjects/Trees/TreePineLarge2Object
-17	Prefabs/WorldObjects/Trees/TreePineSmall1Object
-18	Prefabs/WorldObjects/Trees/TreePineSmall2Object
-19	Prefabs/WorldObjects/Trees/TreePolyPine1Object
-20	Prefabs/WorldObjects/Trees/TreePolyPine2Object
-21	Prefabs/WorldObjects/Trees/TreePolyPine3Object
-22	Prefabs/WorldObjects/Trees/TreePolyPineSparse1Object
-23	Prefabs/WorldObjects/Trees/TreePolyPineSparse2Object
-24	Prefabs/WorldObjects/Trees/TreePolyPineSparse3Object
+10	
+11	
+12	
+13	
+14	
+15	
+16	
+17	
+18	
+19	
+20	
+21	
+22	
+23	
+24	
 25	Prefabs/Mobiles/SyntyPeasantObject
 26	Prefabs/Mobiles/SyntyMilitiaObject
 27	Prefabs/Mobiles/SyntyKnightObject
 28	Prefabs/WorldObjects/Equipment/HatchetObject
-29	Prefabs/WorldObjects/Trees/TreeWillowLargeObject
-30	Prefabs/WorldObjects/Trees/TreeWillowMediumObject
-31	Prefabs/WorldObjects/Trees/TreeWillowSmallObject
-32	Prefabs/WorldObjects/Rocks/RockPile1Object
-33	Prefabs/WorldObjects/Rocks/RockPile2Object
-34	Prefabs/WorldObjects/Rocks/RockPile3Object
-35	Prefabs/WorldObjects/Rocks/RockPile4Object
-36	Prefabs/WorldObjects/Rocks/RockPile5Object
-37	Prefabs/WorldObjects/Rocks/RockPileRounded1Object
-38	Prefabs/WorldObjects/Rocks/RockPileSmall1Object
-39	Prefabs/WorldObjects/Misc/GridPreviewObject
+29	
+30	
+31	
+32	
+33	
+34	
+35	
+36	
+37	
+38	
+39	
 40	Prefabs/WorldObjects/Equipment/BowObject
 41	Prefabs/WorldObjects/Equipment/ArrowObject
 42	Prefabs/WorldObjects/Props/BrickObject
 43	Prefabs/WorldObjects/Props/CampfireObject
 44	Prefabs/WorldObjects/Props/ChestObject
-45	Prefabs/WorldObjects/Props/Fence1Object
-46	Prefabs/WorldObjects/Props/Fence2Object
-47	Prefabs/WorldObjects/Props/StoneWall1Object
-48	Prefabs/WorldObjects/Props/StoneWall2Object
-49	Prefabs/WorldObjects/Props/StoneWall3Object
+45	
+46	
+47	
+48	
+49	
 50	Prefabs/WorldObjects/Equipment/MagicStaffObject
 51	Prefabs/Mobiles/SkeletonSlaveObject
 52	Prefabs/Mobiles/SkeletonSoldierObject
@@ -79,21 +79,21 @@
 78	Prefabs/WorldObjects/Equipment/PlateGlovesObject
 79	Prefabs/WorldObjects/Equipment/Helm02Object
 80	Prefabs/WorldObjects/Equipment/PlateLegsObject
-81	Prefabs/WorldObjects/Buildings/BarracksObject
-82	Prefabs/WorldObjects/Buildings/BarracksFoundationObject
-83	Prefabs/WorldObjects/Buildings/FarmHouseObject
-84	Prefabs/WorldObjects/Buildings/FarmHouseFoundationObject
-85	Prefabs/WorldObjects/Props/GrassMoundObject
-86	Prefabs/WorldObjects/Buildings/MilitiaCampGroundsObject
-87	Prefabs/WorldObjects/Buildings/FarmGroundObject
+81	
+82	
+83	
+84	
+85	
+86	
+87	
 88	Prefabs/WorldObjects/Props/PumpkinLargeObject
 89	Prefabs/WorldObjects/Props/PumpkinSmallObject
-90	Prefabs/WorldObjects/Props/DirtMoundObject
+90	
 91	Prefabs/WorldObjects/Props/CastleDoorObject
-92	Prefabs/WorldObjects/Buildings/TrainingGroundsObject
+92	
 93	Prefabs/WorldObjects/Props/HouseDoorObject
 94	Prefabs/WorldObjects/Props/TrainingDummyObject
-95	Prefabs/WorldObjects/Props/BrickPathObject
+95	
 96	Prefabs/WorldObjects/Equipment/BearHelmObject
 97	Prefabs/WorldObjects/Equipment/WolfHelmObject
 98	Prefabs/WorldObjects/Equipment/HideArmsObject
@@ -140,7 +140,7 @@
 139	Prefabs/Mobiles/SyntyJesterObject
 140	Prefabs/WorldObjects/Equipment/CapeObject
 141	Prefabs/WorldObjects/Equipment/ShroudObject
-142	Prefabs/WorldObjects/Buildings/SmallHouseObject
+142	
 143	Prefabs/WorldObjects/Props/HouseDoor2Object
 144	Prefabs/WorldObjects/Buildings/SignObject
 145	Prefabs/Mobiles/DeathknightObject
@@ -309,3 +309,7 @@
 308	Prefabs/WorldObjects/Equipment/ChainChestObject
 309	Prefabs/WorldObjects/Equipment/ChainHelm02Object
 310	Prefabs/WorldObjects/Props/BGDoorObject
+311	Prefabs/WorldObjects/Equipment/ChainArmsObject
+312	Prefabs/WorldObjects/Equipment/ChainLegsObject
+313	Prefabs/WorldObjects/Equipment/ChainGlovesObject
+314	Prefabs/WorldObjects/Equipment/ChainBootsObject

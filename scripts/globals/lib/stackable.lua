@@ -5,20 +5,21 @@
 
 Stackable = {}
 
-function Stackable.Is(item, templateid, skipChecks)
-    if not( templateid ) then
-        if not( skipChecks ) then
-            if not( item ) then
-                LuaDebugCallStack("[Stackable.Is] item not provided.")
-                return false
-            end
-            if not( item:IsValid() ) then
-                LuaDebugCallStack("[Stackable.Is] invalid item provided.")
-                return false
-            end
+function Stackable.Item(item, skipChecks)
+    if not( skipChecks ) then
+        if not( item ) then
+            LuaDebugCallStack("[Stackable.Is] item not provided.")
+            return false
         end
-        templateid = Object.TemplateId(item)
+        if not( item:IsValid() ) then
+            LuaDebugCallStack("[Stackable.Is] invalid item provided.")
+            return false
+        end
     end
+    return Stackable.Is(Object.TemplateId(item))
+end
+
+function Stackable.Is(templateid)
     if not( templateid ) then return false end
     return Template[templateid] and Template[templateid].Stackable
 end
@@ -27,11 +28,11 @@ function Stackable.Combinable(item, templateid, skipChecks)
     if not( templateid ) then
         if not( skipChecks ) then
             if not( item ) then
-                LuaDebugCallStack("[Stackable.Is] item not provided.")
+                LuaDebugCallStack("[Stackable.Combinable] item not provided.")
                 return false
             end
             if not( item:IsValid() ) then
-                LuaDebugCallStack("[Stackable.Is] invalid item provided.")
+                LuaDebugCallStack("[Stackable.Combinable] invalid item provided.")
                 return false
             end
         end
@@ -52,7 +53,7 @@ function Stackable.GetCount(item, skipChecks)
             return 0
         end
     end
-    return item:GetSharedObjectProperty("StackCount") or 1
+    return item:GetSharedObjectProperty("Count") or 1
 end
 
 function Stackable.SetCount(item, amount, skipChecks)
@@ -69,7 +70,7 @@ function Stackable.SetCount(item, amount, skipChecks)
     if ( amount == nil or amount <= 0 ) then
         item:Destroy()
     else
-        item:SetSharedObjectProperty("StackCount", amount)
+        item:SetSharedObjectProperty("Count", amount)
         --SetItemTooltip(item)
     end
     return true
@@ -89,7 +90,7 @@ function Stackable.Adjust(item, amount, skipChecks)
             LuaDebugCallStack("[Stackable.Adjust] amount not provided.")
             return false
         end
-        if not( Stackable.Is(item, nil, true) ) then
+        if not( Stackable.Item(item, true) ) then
             LuaDebugCallStack("[Stackable.Adjust] cannot adjust non-stackable items.")
             return false
         end
@@ -119,9 +120,10 @@ function Stackable.CanStack(item, otherObj, skipChecks)
     end
     local templateid = Object.TemplateId(item)
     if ( not Template[templateid] or not Template[templateid].Combinable ) then return false end
-    if not( Stackable.Is(item, nil, true) ) then return false end
-    if not( Stackable.Is(otherObj, nil, true) ) then return false end
-    return templateid == Object.TemplateId(otherObj)
+    if not( Stackable.Is(templateid) ) then return false end
+    local othertemplateid = Object.TemplateId(otherObj)
+    if not( Stackable.Is(othertemplateid) ) then return false end
+    return templateid == othertemplateid
 end
 
 function Stackable.Combine(item, otherObj)
@@ -141,7 +143,7 @@ function Stackable.Combine(item, otherObj)
         LuaDebugCallStack("[Stackable.Combine] invalid otherObj provided.")
         return false
     end
-    if ( not Stackable.Is(item, nil, true) or not Stackable.Is(otherObj, nil, true) ) then return false end
+    if ( not Stackable.Item(item, true) or not Stackable.Item(otherObj, true) ) then return false end
     if not( Stackable.CanStack(item, otherObj, true) ) then return false end
 
     if ( Stackable.Adjust(item, Stackable.GetCount(otherObj, true), true) ) then

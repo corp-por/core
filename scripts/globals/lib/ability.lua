@@ -9,12 +9,37 @@ function Ability.GetData(ability)
     LuaDebugCallStack(string.format("Invalid Ability Provided: '%s'", ability))
 end
 
+function Ability.Valid(ability)
+    return Abilities[ability] ~= nil
+end
+
 function Ability.DisplayName(ability, data)
     if not( data ) then data = Ability.GetData(ability) end
-    if ( data and data.Action and data.Action.DisplayName ) then
-        return data.Action.DisplayName
+    if ( data and data.DisplayName ) then
+        return data.DisplayName
     end
     return ability
+end
+
+function Ability.Tooltip(ability, data)
+    if not( data ) then data = Ability.GetData(ability) end
+    local tooltip = ""
+
+    if ( data and data.Description ) then
+        tooltip = tooltip .. data.Description .. "\n"
+    end
+
+    if ( data and data.CastTime ) then
+        tooltip = tooltip .. data.CastTime.TotalSeconds .. "s cast \n"
+    end
+
+    return tooltip
+end
+
+function Ability.Icon(ability, data)
+    if not( data ) then data = Ability.GetData(ability) end
+    if not (data ) then return nil end
+    return data.Icon or "SpellBook02_86"
 end
 
 
@@ -124,7 +149,7 @@ function Ability.Perform(playerObj, targetObj, ability, castComplete, consumeObj
         if not( consumeObj:IsValid() ) then
             return Ability.Error("Item is no longer valid.")
         end
-		if ( Stackable.Is(consumeObj) ) then
+		if ( Stackable.Item(consumeObj) ) then
             if not( Stackable.Adjust(consumeObj, -1) ) then
                 return Ability.Error("Failed to consume item.")
             end
@@ -163,6 +188,46 @@ function Ability.Perform(playerObj, targetObj, ability, castComplete, consumeObj
 
 end
 
+function Ability.UserAction(ability, data)
+    data = data ~= nil and data or Ability.GetData(ability)
+    if not( data ) then return nil end
+    
+    return {
+        ID=ability,
+        Icon=Ability.Icon(ability, data),
+        DisplayName=Ability.DisplayName(ability, data),
+        Tooltip=Ability.Tooltip(ability, data),
+        Enabled=true,
+        ServerCommand="cast "..ability,
+    }
+end
+
+function Ability.TestWindow(playerObj, ability, data)
+    data = data ~= nil and data or Ability.GetData(ability)
+
+    if ( data == nil ) then
+        playerObj:SystemMessage("Ability '"..ability.."' not found")
+        return
+    end
+    
+    local dynamicWindow = DynamicWindow(
+        "AbilityWindow:"..ability, --(string) Window ID used to uniquely identify the window. It is returned in the DynamicWindowResponse event.
+        Ability.DisplayName(ability, data), --(string) Title of the window for the client UI
+        280, --(number) Width of the window
+        300 --(number) Height of the window
+        --startX, --(number) Starting X position of the window (chosen by client if not specified)
+        --startY, --(number) Starting Y position of the window (chosen by client if not specified)
+        --windowType, --(string) Window type (optional)
+        --windowAnchor --(string) Window anchor (default "TopLeft")
+    )
+
+    
+    local action = Ability.UserAction(ability, data)
+    dynamicWindow:AddUserAction(10,10,action,200)
+    playerObj:OpenDynamicWindow(dynamicWindow)
+
+end
+
 --- Initiate the cooldown for an ability
 -- @param playerObj
 -- @param position
@@ -173,9 +238,8 @@ function Ability.StartCooldown(playerObj, ability, cooldown)
 	end
     playerObj:ScheduleTimerDelay(cooldown, ability.."Cooldown")
     
-	playerObj:SendClientMessage("ActivateCooldown", {
-		"Ability",
-		ability,
+	playerObj:SendClientMessage("CooldownByCommand", {
+		"cast "..ability, -- server command
 		cooldown.TotalSeconds
 	})
 end
@@ -188,9 +252,8 @@ function Ability.ResetCooldown(playerObj, ability)
 	if ( playerObj:HasTimer(timerId) ) then
 
 		-- a timer exists, so the client should prevent the button, let's fix that
-		playerObj:SendClientMessage("ActivateCooldown", {
-			"Ability",
-			ability,
+		playerObj:SendClientMessage("CooldownByCommand", {
+			"cast "..ability, -- action id
 			0
 		})
 		-- then clear the timer
@@ -327,15 +390,10 @@ function Ability.Cast.Timer(playerObj, ability, abilityData, target, consumeObj,
         end
         
         playerObj:StopCastbar()
-        local icon = abilityData.Action and abilityData.Action.Icon or nil
-        if ( icon == nil ) then
-            icon = "SpellBook02_86"
-        end
+        playerObj:Castbar(Ability.Icon(ability, abilityData), timer.TotalSeconds, isRefresh or false)
 
-        playerObj:Castbar(icon, timer.TotalSeconds, isRefresh or false)
-
-        if ( 
-            (
+        if ( IsPlayerCharacter(playerObj) ) then
+            local target = (
                 abilityData.RequireLocationTarget
                 or
                 abilityData.RequireTarget
@@ -347,11 +405,8 @@ function Ability.Cast.Timer(playerObj, ability, abilityData, target, consumeObj,
                 abilityData.RequireDeadTarget
                 or
                 abilityData.RequireValidFriendlyTarget
-            )
-            and
-            IsPlayerCharacter(playerObj)
-        ) then
-            playerObj:SendClientMessage("StartCasting", timer.TotalSeconds)
+            ) ~= nil
+            playerObj:SendClientMessage("StartCasting", {timer.TotalSeconds, target})
         end
 
         playerObj:ScheduleTimerDelay(timer, "CastAbility", ability, target, consumeObj) 
@@ -410,7 +465,7 @@ function Ability.Cast.Cancel(playerObj, keepCurrentLoadedAbility)
     if ( playerObj:HasTimer("CastAbility") ) then
         
         if ( IsPlayerCharacter(playerObj) ) then
-            playerObj:SendClientMessage("StartCasting", 0)
+            playerObj:SendClientMessage("StopCasting")
         end
 
         local ability

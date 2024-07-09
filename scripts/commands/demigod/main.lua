@@ -166,6 +166,7 @@ Include.functions = {
                 end)
         end
     end,
+    Ability = function(ability) Ability.TestWindow(this, ability) end,
 }
 
 -- command definitions: { name, function, usage, description, aliases }
@@ -177,6 +178,7 @@ Include.commands = {
     { "search", Include.functions.Search, "[<name>]", "[$2486]" },
     { "copy", Include.functions.Copy, "[<target_id>]", "[$2495]"},
     { "summon", Include.functions.Summon, "[<target_id>]", "Summon your target"},
+    { "ability", Include.functions.Ability, "[<ability>]", "Handy dandy ability user action window."},
 }
 
 return Include

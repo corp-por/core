@@ -139,12 +139,13 @@ Create.InBackpack = function(template, mobile, containerloc, cb)
     Create.InContainer(template, backpack, containerloc, cb)
 end
 
---- Create a template at a location, assigning StackCount before creation
+--- Create a template at a location, assigning Count before creation. If you want to create a stack with the amount from template, use regular Create.
 -- @param template
 -- @param count - stack count
 -- @param loc - location in world
 -- @param cb - function(obj) callback
 Create.Stack.AtLoc = function(template, count, loc, cb)
+    if not( Stackable.Is(template) ) then return Create.AtLoc(template, loc, cb) end
     if ( count == nil or count < 1 ) then count = 1 end
 
     local id = template..uuid()
@@ -154,37 +155,33 @@ Create.Stack.AtLoc = function(template, count, loc, cb)
         end
         if ( cb ) then cb(success and obj or nil) end
     end)
+
+    local templateData = GetTemplateData(template)
     
     -- set the stack count before creating
-    local templateData = GetTemplateData(template)
-    if ( templateData.SharedProperties == nil ) then templateData.SharedProperties = {} end
-    if ( templateData.SharedProperties.StackCount == nil or templateData.SharedProperties.StackCount < 1 ) then
-        templateData.SharedProperties.StackCount = count
+    if ( templateData.SharedProperties == nil ) then
+        templateData.SharedProperties = {}
     end
+    templateData.SharedProperties.Count = count
 
     CreateCustomObj(template, templateData, loc, id)
 end
 
---- Create a template in a container, assigning StackCount before creation
+--- Create a template in a container, assigning Count before creation
 -- @param template
 -- @param container - container gameObj
 -- @param count - stack count
 -- @param containerloc - (optional) location in container
 -- @param cb - function(obj) callback
 Create.Stack.InContainer = function(template, container, count, containerloc, cb)
+    if not( Stackable.Is(template) ) then return Create.InContainer(template, container, containerloc, cb) end
     if ( count == nil or count < 1 ) then count = 1 end
 
-    -- get the template id
+    -- copy the template data
     local templateData = GetTemplateData(template)
 
     if not(templateData) then
         LuaDebugCallStack("[Create.Stack.InContainer] ERROR: Invalid template specified. "..tostring(template))
-        return
-    end
-
-    -- if this template isn't stackable then create a single one of them
-    if not( Stackable.Is(nil, template) ) then
-        Create.InContainer(template, container, containerloc, cb)
         return
     end
     
@@ -204,15 +201,15 @@ Create.Stack.InContainer = function(template, container, count, containerloc, cb
     end)
     
     -- set the stack count before creating
-    if ( templateData.SharedProperties == nil ) then templateData.SharedProperties = {} end
-    if ( templateData.SharedProperties.StackCount == nil or templateData.SharedProperties.StackCount < 1 ) then
-        templateData.SharedProperties.StackCount = count
+    if ( templateData.SharedProperties == nil ) then
+        templateData.SharedProperties = {}
     end
+    templateData.SharedProperties.Count = count
 
     CreateCustomObjInContainer(template, templateData, container, containerloc, id)
 end
 
---- Create a template in a mobile's backpack, assigning StackCount before creation
+--- Create a template in a mobile's backpack, assigning Count before creation
 -- @param template
 -- @param mobile - mobileObj
 -- @param count - stack count

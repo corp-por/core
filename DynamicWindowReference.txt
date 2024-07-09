@@ -44,11 +44,3 @@ MenuTextSmall
 MenuTextSmall2
 LoginPortraitButton
 TwoColorSelection
-
-User Action Types:
-Square
-Diamond
-Circle
-DiamondSilver
-SquareFixed
-SquareFixedNoHotkey

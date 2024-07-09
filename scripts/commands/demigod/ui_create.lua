@@ -125,8 +125,8 @@ RegisterEventHandler(EventType.ClientTargetLocResponse, "createTemplateAt",
 		elseif(createType == "Packed") then createFunc = CreatePackedObjectAtLoc end
 
         if(createAmount > 1 ) then
-            if( GetTemplateObjVar(templateId,"ResourceType") ~= nil) then
-                Create.Stack.AtLoc(templateId, amount, targetLoc, function(obj)
+            if ( Stackable.Is(templateId) ) then
+                Create.Stack.AtLoc(templateId, createAmount, targetLoc, function(obj)
 					if not( obj:IsMobile() ) then
 						Object.Decay(obj)
 					end
@@ -144,7 +144,7 @@ RegisterEventHandler(EventType.ClientTargetLocResponse, "createTemplateAt",
 				end
 			end
 		else
-            Create.Stack.AtLoc(templateId, nil, targetLoc, function(obj)
+            Create.AtLoc(templateId, targetLoc, function(obj)
                 if not( obj:IsMobile() ) then
 					Object.Decay(obj)
                 end

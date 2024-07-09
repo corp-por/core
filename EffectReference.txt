@@ -1,5 +1,5 @@
-ArrowEffect
-FireballEffect
+Arrow
+Fireball
 FlashRedEffect
 MagicMissileEffect
 ChargeBlue
@@ -58,7 +58,7 @@ PolymorphSmokeEffect
 FireballExplosion
 StunHitEffect
 StunnedEffect
-EnergyBoltEffect
+EnergyBolt
 EnergyBoltExplosion
 DispelEffect
 ResurrectEffect
@@ -83,3 +83,5 @@ QuestEssenceBearScat
 QuestEssenceGrainSack
 QuestEssencePaladinCorpse
 QuestEssenceHolyWaterReceptacle
+BloodSplat
+FX_Slash_01

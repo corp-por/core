@@ -39,6 +39,7 @@ function OnLoad()
 	BankBox.Init(this)
 	Backpack.Init(this, function(backpack)
 		UI.Main.Init(this)
+		UI.Hotbar.Init(this)
 	end)
 end
 
@@ -59,19 +60,50 @@ function OnUserLogout()
 	this:CompleteLogout()
 end
 
+local CarriedObjectSource = nil
 -- User has attempted to pick up an object in the world
 -- NOTE: The client assumes they can pick up most objects so you have to call SendPickupFailed if
 -- the object can not be picked up for some reason
 -- @param Object to be picked up
 function HandleRequestPickUp(pickedUpObject)
+	CarriedObjectSource = {
+		Loc = pickedUpObject:GetLoc(),
+		Container = pickedUpObject:ContainedBy()
+	}
 	local success, reason = Interaction.TryPickup(this, pickedUpObject)
-	if not( success ) then
+	if ( success ) then
+		local equipSlot = Equipment.GetSlot(pickedUpObject)
+		if ( equipSlot ~= nil and this:GetEquippedObject(equipSlot) == pickedUpObject ) then
+			CarriedObjectSource.EquipSlot = equipSlot
+		end
+	else
+		CarriedObjectSource = nil
 		this:SendPickupFailed(pickedUpObject)
 		if ( reason ) then
 			this:SystemMessage(reason, "info")
 		end
 	end
 end
+
+RegisterEventHandler(EventType.Message, "UndoPickup", function(notInWorld)
+	if ( CarriedObjectSource == nil ) then return end
+	local carriedObject = this:CarriedObject()
+	if ( carriedObject ~= nil and carriedObject:IsValid() ) then
+		if ( notInWorld == true and CarriedObjectSource.Container == nil ) then return end
+
+		if ( CarriedObjectSource.Container ~= nil and CarriedObjectSource.Container:IsValid() ) then
+			if ( CarriedObjectSource.Container == this and CarriedObjectSource.EquipSlot ~= nil ) then
+				Interaction.TryEquip(this, carriedObject)
+			else
+				Interaction.TryDrop(this, carriedObject, CarriedObjectSource.Loc, CarriedObjectSource.Container)
+			end
+		else
+			Interaction.TryDrop(this, carriedObject, CarriedObjectSource.Loc)
+		end
+
+	end
+	CarriedObjectSource = nil
+end)
 
 -- User has attempted to drop an object they were carrying
 -- NOTE: The parameter dropLocationSpecified is necesary because the engine can not send an "invalid" location

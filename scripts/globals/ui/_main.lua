@@ -5,6 +5,7 @@ UI = {}
 
 require 'globals.ui.character'
 require 'globals.ui.dialog'
+require 'globals.ui.hotbar'
 require 'globals.ui.main'
 require 'globals.ui.player_status'
 require 'globals.ui.target'

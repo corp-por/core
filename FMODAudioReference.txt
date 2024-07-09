@@ -120,6 +120,11 @@ animals : event:/animals/wolf/wolf_pain
 animals : event:/animals/worm/worm_attack
 animals : event:/animals/worm/worm_death
 animals : event:/animals/worm/worm_pain
+boss_nest_mother : event:/bosses/nest_mother/nest_mother_attack
+boss_nest_mother : event:/bosses/nest_mother/nest_mother_death
+boss_nest_mother : event:/bosses/nest_mother/nest_mother_footsteps
+boss_nest_mother : event:/bosses/nest_mother/nest_mother_pain
+boss_nest_mother : event:/bosses/nest_mother/nest_mother_spawn_nest
 character : event:/character/combat_abilities/adrenaline_rush
 character : event:/character/combat_abilities/charge
 character : event:/character/combat_abilities/defend
@@ -184,6 +189,7 @@ environment : event:/environment/water/river_large_bridge
 environment : event:/environment/water/river_small
 environment : event:/environment/water/river_small_bridge
 environment : event:/environment/water/shore
+environment : event:/environment/water/splash
 environment : event:/environment/water/water_mill
 environment : event:/environment/water/waterfall
 Magic : event:/magic/air/magic_air_cast_air
@@ -491,7 +497,6 @@ sfx : event:/objects/containers/utility_pouch/utility_pouch_drop
 sfx : event:/objects/containers/utility_pouch/utility_pouch_open
 sfx : event:/objects/containers/utility_pouch/utility_pouch_pickup
 sfx : snapshot:/reverbs outside/outdoor
-test : event:/test/test_baby
 ui : event:/ui/click_fail
 ui : event:/ui/click_negativ
 ui : event:/ui/click_positiv

@@ -5,11 +5,11 @@
         <SharedStateEntry name="TooltipString" type="string" value=""/>
         <SharedStateEntry name="DefaultInteraction" type="string" value=""/>
         <SharedStateEntry name="NoInteract" type="bool" value="False"/>
-        <SharedStateEntry name="DenyPickup" type="bool" value="True"/>
+        <SharedStateEntry name="DenyPickup" type="bool" value="False"/>
         <SharedStateEntry name="DurabilityStr" type="string" value=""/>
-        <SharedStateEntry name="Category" type="string" value=""/>
+        <SharedStateEntry name="Resource" type="string" value=""/>
         <SharedStateEntry name="Rarity" type="string" value=""/>
-        <SharedStateEntry name="StackCount" type="double" value="0"/>
+        <SharedStateEntry name="Count" type="double" value="0"/>
         <SharedStateEntry name="CustomIcon" type="string" value=""/>
         <SharedStateEntry name="IconBackground" type="string" value=""/>
     </ObjectTag>
