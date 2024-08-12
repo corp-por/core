@@ -1,10 +1,10 @@
 0	Prefabs/NoDraw
 1	Prefabs/Mobiles/SyntyMaleObject
-2	Prefabs/NoDraw
-3	Prefabs/TradeObject
+2	Prefabs/TradeObject
+3
 4	Prefabs/WorldObjects/Equipment/BackpackObject
 5	Prefabs/WorldObjects/Equipment/SwordLObject
-6	
+6	Prefabs/WorldObjects/Consumables/LogsObject
 7	Prefabs/WorldObjects/Equipment/SwordObject
 8	
 9	Prefabs/WorldObjects/Resources/CoinsObject
@@ -142,7 +142,7 @@
 141	Prefabs/WorldObjects/Equipment/ShroudObject
 142	
 143	Prefabs/WorldObjects/Props/HouseDoor2Object
-144	Prefabs/WorldObjects/Buildings/SignObject
+144	
 145	Prefabs/Mobiles/DeathknightObject
 146	Prefabs/Mobiles/BlackBearObject
 147	Prefabs/Mobiles/BlackBoarObject
@@ -157,14 +157,14 @@
 156	Prefabs/Mobiles/SpiderRedObject
 157	Prefabs/Mobiles/TimberWolfObject
 158	Prefabs/Mobiles/BlackWolfObject
-159	Prefabs/WorldObjects/Resources/WhiteFlowerObject
-160	Prefabs/WorldObjects/Resources/YellowFlowerObject
-161	Prefabs/WorldObjects/Resources/ThornObject
-162	Prefabs/WorldObjects/Resources/RootObject
-163	Prefabs/WorldObjects/Resources/RedMushroomObject
-164	Prefabs/WorldObjects/Resources/PurpleFlowerObject
-165	Prefabs/WorldObjects/Resources/FernObject
-166	Prefabs/WorldObjects/Resources/BrownMushroomObject
+159	
+160	
+161	
+162	
+163	
+164	
+165	
+166	
 167	Prefabs/WorldObjects/Resources/ScarabObject
 168	Prefabs/WorldObjects/Equipment/Hat02Object
 169	Prefabs/WorldObjects/Equipment/Hat03Object
@@ -313,3 +313,4 @@
 312	Prefabs/WorldObjects/Equipment/ChainLegsObject
 313	Prefabs/WorldObjects/Equipment/ChainGlovesObject
 314	Prefabs/WorldObjects/Equipment/ChainBootsObject
+315	Prefabs/WorldObjects/Equipment/KiltHipsObject

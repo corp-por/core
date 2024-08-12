@@ -1,6 +1,8 @@
 -- SPDX-License-Identifier: AGPL-3.0-only
 -- Copyright © 2023 Corp Por LTD
 
+_G.Instance = this
+
 require 'clusterglobal_request_response'
 
 local MASTER_CONTROLLER_PULSE_SPEED = TimeSpan.FromMinutes(1)
@@ -11,6 +13,9 @@ this:RemoveTimer("MasterControllerPulse")
 
 local regionAddress = ServerSettings.RegionAddress
 local isMasterController = false
+
+-- init future pulse
+Future.Init(this)
 
 function OnLoad()
 	this:SetObjectTag("InstanceController")

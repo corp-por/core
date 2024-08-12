@@ -381,9 +381,9 @@ Town Width:2048 Height:1024
 ClientIds with 2D Textures:
 1
 2
-3
 4
 5
+6
 7
 9
 25
@@ -492,14 +492,6 @@ ClientIds with 2D Textures:
 156
 157
 158
-159
-160
-161
-162
-163
-164
-165
-166
 167
 168
 169

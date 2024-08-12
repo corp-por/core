@@ -3,5 +3,6 @@
 
 
 
+require 'globals.effects.common.harvest'
 require 'globals.effects.common.mount'
 require 'globals.effects.common.speedmodify'

@@ -16,7 +16,7 @@ Effects.Example = {
     end,
     -- if the effect a good or a bad effect?
     Debuff = false,
-    -- can the effect the canceled? (by clicking the icon)
+    -- can the effect be canceled? (by clicking the icon)
     Cancelable = false,
     -- total duration of this effect (optional)
     Duration = TimeSpan.FromSeconds(15),
@@ -27,6 +27,9 @@ Effects.Example = {
     PersistSession = false,
     -- should this effect remain on death?
     PersistDeath = false,
+
+    -- end the effect when any movement occurs?
+    EndOnMovement = false,
 
     -- handle starting the effect, returning false means the effect failed to start
     OnStart = function(self)

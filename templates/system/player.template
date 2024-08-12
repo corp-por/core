@@ -2,7 +2,8 @@
 	TemplateName = "Player",
 	ClientId = 1,
 	Mobile = {
-		MobileType = "Player"
+		MobileType = "Player",
+		MovementSpeed = ServerSettings.DefaultMovementSpeed
 	},
 	Attach = "player",
 	Stats = {

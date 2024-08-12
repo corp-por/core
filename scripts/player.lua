@@ -22,8 +22,6 @@ Command = require 'commands.main'
 
 -- Send messages client expects on login
 function InitializeClient()
-	this:SetBaseMoveSpeed(ServerSettings.Stats.BaseMoveSpeed)
-
 	this:SendClientMessage("TimeUpdate", {
 		GetCurrentTimeOfDay(), 
 		GetDaylightDurationSecs(), 
@@ -130,6 +128,11 @@ function HandleUseCommand(usedObjectId)
 	Interaction.TryUse(this, object)
 end
 
+function HandleMapObjUseCommand(index, layer, x, z)
+	local mapObj = MapObj(tonumber(index), tonumber(x), tonumber(z), tonumber(layer))
+	Interaction.TryUseMapObj(mapObj, this)
+end
+
 -- Event Handlers
 
 -- Inititalization handlers only fire once so just register single event handlers
@@ -140,3 +143,4 @@ RegisterEventHandler(EventType.RequestPickUp, "", function(...) HandleRequestPic
 RegisterEventHandler(EventType.RequestDrop, "", function(...) HandleRequestDrop(...) end)
 RegisterEventHandler(EventType.RequestEquip, "", function(...) HandleRequestEquip(...) end)
 RegisterEventHandler(EventType.ClientUserCommand, "use", function(...) HandleUseCommand(...) end)
+RegisterEventHandler(EventType.ClientUserCommand, "muse", function(...) HandleMapObjUseCommand(...) end)

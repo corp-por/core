@@ -39,7 +39,7 @@ function UI.Hotbar.Init(playerObj)
             i, --slot index
             UI.Hotbar.IconSize, --width
             UI.Hotbar.IconSize, --height
-            userActions[i].Draggable == true or userActions[i].Draggable == nil --draggable (if draggable not set default to true)
+            true --userActions[i].Draggable == true or userActions[i].Draggable == nil --draggable (if draggable not set default to true)
         )
     end
 

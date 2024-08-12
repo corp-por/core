@@ -131,7 +131,7 @@ function Effect.OnDeath(gameObj)
     if ( effects ~= nil ) then
         for effect,self in pairs(effects) do
             if ( Effects[effect].PersistDeath ~= true ) then
-                _endeffect(self, false, effects)
+                _endeffect(self, true, effects)
             end
         end
     end
@@ -153,7 +153,7 @@ function Effect.OnMovement(gameObj)
     if ( effects ~= nil ) then
         for effect,self in pairs(effects) do
             if ( Effects[effect].EndOnMovement == true ) then
-                _endeffect(self, false, effects)
+                _endeffect(self, true, effects)
             end
         end
     end

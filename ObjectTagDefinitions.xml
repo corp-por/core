@@ -103,26 +103,10 @@
         <SharedStateEntry name="Capacity" type="int" value="0"/>
         <SharedStateEntry name="DenyPickup" type="bool" value="False"/>
         <SharedStateEntry name="DefaultInteraction" type="string" value="Open"/>
-        <ClientId>3</ClientId>
         <ClientId>4</ClientId>
         <ClientId>44</ClientId>        <!-- ChestObject -->
         <ClientId>206</ClientId>        <!-- LootChestObject -->
         <ClientId>138</ClientId>
-    </ObjectTag>
-    <ObjectTag>
-        <Name>HarvestForageObject</Name>
-        <SharedStateEntry name="ObjectOffset" type="double" value="0.2"/>
-        <ClientId>160</ClientId>         <!-- YellowFlowerObject -->
-        <ClientId>159</ClientId>        <!-- WhiteFlowerObject -->
-        <ClientId>161</ClientId>        <!-- ThornObject -->
-        <ClientId>167</ClientId>        <!-- ScarabObject -->
-        <ClientId>162</ClientId>        <!-- RootObject -->
-        <ClientId>163</ClientId>        <!-- RedMushroomObject -->
-        <ClientId>164</ClientId>        <!-- PurpleFlowerObject -->
-        <ClientId>165</ClientId>        <!-- FernObject -->
-        <ClientId>166</ClientId>        <!-- BrownMushroomObject -->
-
-        <ClientId>206</ClientId>        <!-- LootChestObject -->
     </ObjectTag>
     <ObjectTag>
         <Name>Mobile</Name>
@@ -411,6 +395,11 @@
         
     </ObjectTag>
     <ObjectTag>
+        <Name>Torso</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Torso" restriction="readonly"/>
+
+    </ObjectTag>
+    <ObjectTag>
         <Name>Chest</Name>
         <SharedStateEntry name="EquipSlot" type="string" value="Chest" restriction="readonly"/>
         <ClientId>75</ClientId> <!--PlateChestObject-->
@@ -427,13 +416,24 @@
         <ClientId>308</ClientId> <!--ChainChestObject-->
 
     </ObjectTag>
-        <ObjectTag>
+    <ObjectTag>
         <Name>Arms</Name>
         <SharedStateEntry name="EquipSlot" type="string" value="Arms" restriction="readonly"/>
         <ClientId>76</ClientId> <!--PlateArmsObject-->
         <ClientId>98</ClientId> <!--HideArmsObject-->
         <ClientId>103</ClientId> <!--LeatherArmorObject-->
         <ClientId>311</ClientId> <!--ChainArmsObject-->
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Belt</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Belt" restriction="readonly"/>
+
+    </ObjectTag>
+    <ObjectTag>
+        <Name>Hips</Name>
+        <SharedStateEntry name="EquipSlot" type="string" value="Hips" restriction="readonly"/>
+        <ClientId>315</ClientId> <!--KiltHipsObject-->
+
     </ObjectTag>
     <ObjectTag>
         <Name>Legs</Name>

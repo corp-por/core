@@ -125,6 +125,19 @@ function Interaction.TryUse(playerObj, targetObj)
 	end
 end
 
+--- Attempt to use a MapObj
+--- @param mapObj
+--- @param playerObj
+--- @return true or false
+function Interaction.TryUseMapObj(mapObj, playerObj)
+	if ( mapObj ~= nil and mapObj.Interactable and Harvestable[mapObj.Index..""] ~= nil ) then
+		return Effect.Apply(playerObj, "Harvest", {
+			MapObj = mapObj
+		})
+	end
+	return false
+end
+
 
 --- Get the interaction range of an object (if any) this looks for a specific defined range in properties, and if found, allow interacting with the item in the world, outside of your own container.
 --- @param targetObj | Ths mobile to find the interaction range
@@ -168,7 +181,6 @@ function Interaction.Use(mobileObj, targetObj)
 end
 
 --- Can the player pick up the specified object
---- This is in mobile instead of player because AI can be scripted to pick up objects
 --- @param playerObj
 --- @param object to see if we can pick up
 --- @return true if able to be picked up, false and reason string if not able to pick up

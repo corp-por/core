@@ -4,6 +4,12 @@
 --- This module defines functions that are called directly from Engine
 -- @module globals.engine_callbacks
 
+--- Return a list full of MapObjTypes, telling client a player can interact with them (right click) and a use command will be sent to server.
+InteractableMapObjTypes = {MapObjType.Tree, MapObjType.Rock}
+function GetInteractableMapObjTypes()
+	return InteractableMapObjTypes
+end
+
 --- Returns the list of seed groups that should be loaded when the world is reset. <br><br>
 -- This allows modders to load custom seed object groups based on the region address
 -- For example you could use the same dungeon map to create two unique dungeons by
