@@ -9,7 +9,11 @@ end
 
 RegisterEventHandler(EventType.ClientTargetLocResponse, "TestMapObj", function(success, loc)
     if ( success ) then
-        local mapObj = MapObj(133, loc.X, loc.Z, 0)
+        
+        local mapObj = MapObj(1, loc.X, loc.Z, 0)
+        --mapObj.Red = 0
+        --mapObj.Green = 0
+        --mapObj.Blue = 0
         mapObj:Add()
 
         do return end

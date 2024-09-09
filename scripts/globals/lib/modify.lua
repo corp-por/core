@@ -41,9 +41,9 @@ function Modify.Set(gameObj, mod, id, val, sum)
         end
 
         if ( false ) then -- IsMounted(this) ) then
-            gameObj:SetBaseMoveSpeed(math.max(0.1, Modify.Apply(gameObj, mod, ServerSettings.Stats.BaseMoveSpeed)))
+            gameObj:SetBaseMoveSpeed(math.max(0.1, Modify.Apply(gameObj, mod, ServerSettings.DefaultMovementSpeed)))
         else
-            gameObj:SetBaseMoveSpeed(math.max(0.1, Modify.Apply(gameObj, mod, ServerSettings.Stats.BaseMoveSpeed)))
+            gameObj:SetBaseMoveSpeed(math.max(0.1, Modify.Apply(gameObj, mod, ServerSettings.DefaultMovementSpeed)))
         end
     end
 

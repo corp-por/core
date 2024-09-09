@@ -89,6 +89,10 @@ Include.functions = {
         ReloadTemplates()
     end,
 
+    ReloadColors = function()
+        ReloadColors()
+    end,
+
     -- backup
     ServerBackup = function()
         ForceBackup()
@@ -183,6 +187,7 @@ Include.commands = {
     { "dostring", Include.functions.DoString, "<lua code>", Desc="[$2514]", { "exec" } },
     { "reload", Include.functions.ReloadBehavior, "<behavior>", "[DEBUG COMMAND] Reload the behavior in memory." },
     { "reloadtemplates", Include.functions.ReloadTemplates, "", "[DEBUG COMMAND] Reload all templates in memory." },
+    { "reloadcolors", Include.functions.ReloadColors, "", "[DEBUG COMMAND] Reload all color definitions in memory." },
     { "info", Include.functions.Info, "", "Get information about an object. Gives cursor" },
     { "opencontainer", Include.functions.OpenContainer, "", "View the contents of a container." },
     { "shadow", Include.functions.Shadow, "", "Debug movement by seeing server the representation of a character." }

@@ -3,4 +3,5 @@
 
 Harvestable = {}
 
+require 'globals.static_data.harvestable.rocks'
 require 'globals.static_data.harvestable.trees'

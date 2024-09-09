@@ -1,7 +1,7 @@
 0	Prefabs/NoDraw
 1	Prefabs/Mobiles/SyntyMaleObject
 2	Prefabs/TradeObject
-3
+3	
 4	Prefabs/WorldObjects/Equipment/BackpackObject
 5	Prefabs/WorldObjects/Equipment/SwordLObject
 6	Prefabs/WorldObjects/Consumables/LogsObject
@@ -86,8 +86,8 @@
 85	
 86	
 87	
-88	Prefabs/WorldObjects/Props/PumpkinLargeObject
-89	Prefabs/WorldObjects/Props/PumpkinSmallObject
+88	Prefabs/WorldObjects/Resources/PumpkinResourceObject
+89	
 90	
 91	Prefabs/WorldObjects/Props/CastleDoorObject
 92	
@@ -107,7 +107,7 @@
 106	Prefabs/WorldObjects/Equipment/LeatherGlovesObject
 107	Prefabs/WorldObjects/Equipment/LeatherLegsObject
 108	Prefabs/WorldObjects/Equipment/SpearObject
-109	Prefabs/WorldObjects/Consumables/IngotGoldObject
+109	Prefabs/WorldObjects/Consumables/OreObject
 110	Prefabs/WorldObjects/Consumables/IngotObject
 111	Prefabs/WorldObjects/Consumables/MeatCookedObject
 112	Prefabs/WorldObjects/Consumables/MeatRawObject
@@ -197,9 +197,9 @@
 196	Prefabs/WorldObjects/Resources/WhiteFlowerResourceObject
 197	Prefabs/WorldObjects/Resources/YellowFlowerResourceObject
 198	Prefabs/Mobiles/TigerObject
-199	Prefabs/WorldObjects/Resources/CarpObject
+199	
 200	Prefabs/WorldObjects/Resources/CarpResourceObject
-201	Prefabs/WorldObjects/Resources/LobsterObject
+201	
 202	Prefabs/WorldObjects/Resources/LobsterResourceObject
 203	Prefabs/WorldObjects/Props/WeaponRackObject
 204	Prefabs/WorldObjects/Props/SquareDoorObject

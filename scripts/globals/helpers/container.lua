@@ -22,7 +22,7 @@ function FindItemInContainerByTemplate(contObj, templateid)
 	local contents = contObj:GetContainedObjects()
 	for i=1,#contents do
 		if ( Object.TemplateId(contents[i]) == templateid ) then
-			return containedObj		
+			return contents[i]		
 		end
 	end
 end
@@ -38,7 +38,7 @@ function FindItemInContainer(contObj,compFunc)
 	local contents = contObj:GetContainedObjects()
 	for i=1,#contents do
 		if ( compFunc(contents[i]) ) then
-			return containedObj		
+			return contents[i]		
 		end
 	end
 end
@@ -65,10 +65,10 @@ function FindItemInContainerRecursive (contObj, compFunc)
 	local contents = contObj:GetContainedObjects()
 	for i=1,#contents do	
 		if ( compFunc(contents[i]) ) then
-			return containedObj
+			return contents[i]
 		end
 
-		local subResult = FindItemInContainerRecursive(containedObj, compFunc)
+		local subResult = FindItemInContainerRecursive(contents[i], compFunc)
 		if ( subResult ) then
 			return subResult
 		end
@@ -96,9 +96,9 @@ function FindItemsInContainerRecursive(contObj,compFunc)
 	local contents = contObj:GetContainedObjects()
 	for i=1,#contents do
 		if ( compFunc(contents[i]) ) then
-			table.insert(result, containedObj)
+			table.insert(result, contents[i])
 		end
-		local subResults = FindItemsInContainerRecursive(containedObj, compFunc)
+		local subResults = FindItemsInContainerRecursive(contents[i], compFunc)
 		if ( #subResults > 0 ) then
 			for i=1,#subResults do
 				table.insert(result, subResults[i])

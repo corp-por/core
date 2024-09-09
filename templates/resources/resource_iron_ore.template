@@ -1,0 +1,5 @@
+{
+	ClientId = 109,
+	Name = "Iron Ore",
+	Color = Color.Value.Iron,
+}

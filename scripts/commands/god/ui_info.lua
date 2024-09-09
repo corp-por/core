@@ -31,7 +31,6 @@ function DoInfo(target)
     newWindow:AddLabel(20, 10, "[F3F781]Name: [-]"..(curInfoObj:GetName() or ""),600,0,18,"left",false)
     newWindow:AddLabel(20, 30, "[F3F781]Loc: [-]" ..tostring(curInfoObj:GetLoc()),600,0,18,"left",false)
     newWindow:AddLabel(20, 50, "[F3F781]Template: [-]"..tostring(curInfoObj:GetCreationTemplateId()),600,0,18,"left",false)
-    newWindow:AddLabel(210, 50, "[F3F781]Hue: [-]"..tostring(curInfoObj:GetHue()),600,0,18,"left",false)
     if(curInfoObj:IsPlayer()) then
     	newWindow:AddLabel(295, 50, "[F3F781]UserId: [-]"..tostring(curInfoObj:GetAttachedUserId()),600,0,18,"left",false)
     else

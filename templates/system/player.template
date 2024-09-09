@@ -1,6 +1,7 @@
 {
 	TemplateName = "Player",
 	ClientId = 1,
+	Color = "EFD2C5", --FFDAA5
 	Mobile = {
 		MobileType = "Player",
 		MovementSpeed = ServerSettings.DefaultMovementSpeed

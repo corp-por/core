@@ -9,5 +9,4 @@ ServerSettings.DefaultMovementSpeed = 4.0
 
 require 'globals.server_settings.ai'
 require 'globals.server_settings.interaction'
-require 'globals.server_settings.stats'
 require 'globals.server_settings.ui'

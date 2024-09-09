@@ -4,13 +4,15 @@
 Harvestable["0"] = {
     Name = "Pine",
     Reward = "resource_logs",
-    Replace = 139,
+    Replace = 10,
     Respawn = TimeSpan.FromSeconds(15),
+    Tool = "tool_hatchet"
 }
 
-Harvestable["133"] = {
+Harvestable["1"] = {
     Name = "Birch",
     Reward = "resource_logs",
-    Replace = 141,
+    Replace = 10,
     Respawn = TimeSpan.FromSeconds(30),
+    Tool = "tool_pickaxe"
 }
