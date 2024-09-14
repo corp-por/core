@@ -1,6 +1,7 @@
 {
 	Name = "Gold",
 	ClientId = 9,
+	Color = Color.Value.Gold,
 	
     Stackable = true,
 }

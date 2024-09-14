@@ -336,29 +336,153 @@
         <Name>Weapon</Name>
         <SharedStateEntry name="EquipSlot" type="string" value="RightHand" restriction="readonly"/>
         <SharedStateEntry name="DPS" type="double" value="0.0" restriction="readonly"/>
-        <ClientId>7</ClientId><!--Sword-->
-        <ClientId>28</ClientId><!--Hatchet-->
-        <ClientId>40</ClientId><!--Bow-->
-        <ClientId>50</ClientId><!--MagicStaff-->
-        <ClientId>108</ClientId><!--Spear-->
-        <ClientId>122</ClientId><!--PickObject-->
-        <ClientId>132</ClientId><!--HalberdObject-->
+
+        <ClientId>7</ClientId><!--Sword1-->
+        <ClientId>8</ClientId><!--Sword2-->
+        <ClientId>21</ClientId><!--Sword3-->
+        <ClientId>22</ClientId><!--Sword4-->
+        <ClientId>23</ClientId><!--Sword5-->
+        <ClientId>24</ClientId><!--Sword6-->
+        <ClientId>29</ClientId><!--Sword7-->
+        <ClientId>30</ClientId><!--Sword8-->
+        <ClientId>31</ClientId><!--Sword9-->
+        <ClientId>32</ClientId><!--Sword10-->
+        <ClientId>33</ClientId><!--Sword11-->
+        <ClientId>34</ClientId><!--Sword12-->
+        <ClientId>35</ClientId><!--Sword13-->
+        <ClientId>36</ClientId><!--Sword14-->
+        <ClientId>37</ClientId><!--Sword15-->
+        <ClientId>38</ClientId><!--Sword16-->
+        <ClientId>39</ClientId><!--Sword17-->
+        <ClientId>45</ClientId><!--Sword18-->
+        <ClientId>46</ClientId><!--Sword19-->
+        <ClientId>47</ClientId><!--Sword20-->
+        <ClientId>48</ClientId><!--Sword21-->
+        <ClientId>49</ClientId><!--Sword22-->
+        <ClientId>81</ClientId><!--Sword23-->
+        <ClientId>82</ClientId><!--Sword24-->
+        <ClientId>83</ClientId><!--Sword25-->
+        <ClientId>84</ClientId><!--Sword26-->
+        <ClientId>85</ClientId><!--Sword27-->
+        <ClientId>86</ClientId><!--Sword28-->
+        <ClientId>87</ClientId><!--Sword29-->
+        <ClientId>89</ClientId><!--Sword30-->
+        <ClientId>90</ClientId><!--Sword31-->
+        <ClientId>92</ClientId><!--Sword32-->
+        <ClientId>95</ClientId><!--Sword33-->
+        <ClientId>142</ClientId><!--Sword34-->
+        <ClientId>144</ClientId><!--Sword35-->
+
+        <ClientId>28</ClientId><!--HatchetObject-->
+        <ClientId>121</ClientId><!--HammerObject-->
         <ClientId>209</ClientId><!--PitchforkObject-->
-        <ClientId>210</ClientId><!--DaggerObject-->
-        <ClientId>232</ClientId><!--MaceObject-->
-        <ClientId>231</ClientId><!--TwoHammerObject-->
-        <ClientId>123</ClientId><!--TwoAxeObject-->
+        <ClientId>122</ClientId><!--PickaxeObject-->
+        <ClientId>210</ClientId><!--KnifeObject-->
+        
+        <ClientId>40</ClientId><!--BowObject-->
+
+        <ClientId>50</ClientId><!--StaffObject1-->
+        <ClientId>367</ClientId><!--StaffObject2-->
+        <ClientId>368</ClientId><!--StaffObject3-->
+        <ClientId>369</ClientId><!--StaffObject4-->
+        <ClientId>370</ClientId><!--StaffObject5-->
+        <ClientId>371</ClientId><!--StaffObject6-->
+        <ClientId>372</ClientId><!--StaffObject7-->
+        <ClientId>373</ClientId><!--StaffObject8-->
+        <ClientId>374</ClientId><!--StaffObject9-->
+        <ClientId>375</ClientId><!--StaffObject10-->
+        <ClientId>376</ClientId><!--StaffObject11-->
+        <ClientId>377</ClientId><!--StaffObject12-->
+        <ClientId>378</ClientId><!--StaffObject13-->
+        <ClientId>379</ClientId><!--StaffObject14-->
+        <ClientId>380</ClientId><!--StaffObject15-->
+        <ClientId>381</ClientId><!--StaffObject16-->
+
+        <ClientId>108</ClientId><!--SpearObject-->
+
+        <ClientId>132</ClientId><!--HalberdObject1-->
+        <ClientId>319</ClientId><!--HalberdObject2-->
+        <ClientId>320</ClientId><!--HalberdObject3-->
+
+        <ClientId>341</ClientId><!--DaggerObject1-->
+        <ClientId>342</ClientId><!--DaggerObject2-->
+        <ClientId>343</ClientId><!--DaggerObject3-->
+        <ClientId>344</ClientId><!--DaggerObject4-->
+        <ClientId>345</ClientId><!--DaggerObject5-->
+        <ClientId>346</ClientId><!--DaggerObject6-->
+        <ClientId>347</ClientId><!--DaggerObject7-->
+        <ClientId>348</ClientId><!--DaggerObject8-->
+        <ClientId>349</ClientId><!--DaggerObject9-->
+        <ClientId>350</ClientId><!--DaggerObject10-->
+        <ClientId>351</ClientId><!--DaggerObject11-->
+        <ClientId>352</ClientId><!--DaggerObject12-->
+        <ClientId>353</ClientId><!--DaggerObject13-->
+        
+        <ClientId>232</ClientId><!--MaceObject1-->
+        <ClientId>354</ClientId><!--MaceObject2-->
+        <ClientId>355</ClientId><!--MaceObject3-->
+        <ClientId>356</ClientId><!--MaceObject4-->
+        <ClientId>357</ClientId><!--MaceObject5-->
+        <ClientId>358</ClientId><!--MaceObject6-->
+        <ClientId>359</ClientId><!--MaceObject7-->
+        <ClientId>360</ClientId><!--MaceObject8-->
+        <ClientId>361</ClientId><!--MaceObject9-->
+        <ClientId>362</ClientId><!--MaceObject10-->
+        <ClientId>363</ClientId><!--MaceObject11-->
+        <ClientId>364</ClientId><!--MaceObject12-->
+        <ClientId>365</ClientId><!--MaceObject13-->
+        <ClientId>366</ClientId><!--MaceObject14-->
+
+        <ClientId>231</ClientId><!--TwoHammerObject1-->
+        <ClientId>15</ClientId><!--TwoHammerObject2-->
+        <ClientId>16</ClientId><!--TwoHammerObject3-->
+        <ClientId>17</ClientId><!--TwoHammerObject4-->
+        <ClientId>18</ClientId><!--TwoHammerObject5-->
+        <ClientId>19</ClientId><!--TwoHammerObject6-->
+        <ClientId>20</ClientId><!--TwoHammerObject7-->
+
+        <ClientId>123</ClientId><!--TwoAxeObject1-->
+        <ClientId>159</ClientId><!--TwoAxeObject2-->
+        <ClientId>160</ClientId><!--TwoAxeObject3-->
+        <ClientId>161</ClientId><!--TwoAxeObject4-->
+        <ClientId>162</ClientId><!--TwoAxeObject5-->
+        <ClientId>163</ClientId><!--TwoAxeObject6-->
+        <ClientId>164</ClientId><!--TwoAxeObject7-->
+        <ClientId>165</ClientId><!--TwoAxeObject8-->
+        <ClientId>166</ClientId><!--TwoAxeObject9-->
+        <ClientId>199</ClientId><!--TwoAxeObject10-->
+        <ClientId>201</ClientId><!--TwoAxeObject11-->
+        <ClientId>207</ClientId><!--TwoAxeObject12-->
+        <ClientId>316</ClientId><!--TwoAxeObject13-->
+        <ClientId>317</ClientId><!--TwoAxeObject14-->
+        <ClientId>318</ClientId><!--TwoAxeObject15-->
 
     </ObjectTag>
     <ObjectTag>
         <Name>Shield</Name>
         <SharedStateEntry name="EquipSlot" type="string" value="LeftHand" restriction="readonly"/>
         <ClientId>5</ClientId><!--SwordL-->
-        <ClientId>133</ClientId><!--StandardShield-->
-        <ClientId>134</ClientId><!--KiteShield-->
-        <ClientId>135</ClientId><!--Buckler-->
-        <ClientId>136</ClientId><!--RoundShield-->
-        <ClientId>137</ClientId><!--BasedShield-->
+        <ClientId>133</ClientId><!--ShieldObject1-->
+        <ClientId>321</ClientId><!--ShieldObject2-->
+        <ClientId>322</ClientId><!--ShieldObject3-->
+        <ClientId>323</ClientId><!--ShieldObject4-->
+        <ClientId>324</ClientId><!--ShieldObject5-->
+        <ClientId>325</ClientId><!--ShieldObject6-->
+        <ClientId>326</ClientId><!--ShieldObject7-->
+        <ClientId>327</ClientId><!--ShieldObject8-->
+        <ClientId>328</ClientId><!--ShieldObject9-->
+        <ClientId>329</ClientId><!--ShieldObject10-->
+        <ClientId>330</ClientId><!--ShieldObject11-->
+        <ClientId>331</ClientId><!--ShieldObject12-->
+        <ClientId>332</ClientId><!--ShieldObject13-->
+        <ClientId>333</ClientId><!--ShieldObject14-->
+        <ClientId>334</ClientId><!--ShieldObject15-->
+        <ClientId>335</ClientId><!--ShieldObject16-->
+        <ClientId>336</ClientId><!--ShieldObject17-->
+        <ClientId>337</ClientId><!--ShieldObject18-->
+        <ClientId>338</ClientId><!--ShieldObject19-->
+        <ClientId>339</ClientId><!--ShieldObject20-->
+        <ClientId>340</ClientId><!--ShieldObject21-->
     </ObjectTag>
     <ObjectTag>
         <Name>ItemBar</Name>
@@ -606,15 +730,6 @@
         <ClientId>23</ClientId>
     </ObjectTag>
     <ObjectTag>
-        <Name>TerrainModification</Name>
-        <SharedStateEntry name="TerrainType" type="int" value="8"/>
-        <SharedStateEntry name="ShouldFlatten" type="bool" value="true"/>
-        <SharedStateEntry name="ShouldChangeTexture" type="bool" value="true"/>
-        <SharedStateEntry name="ForceHeight" type="bool" value="false"/>
-        <SharedStateEntry name="TerrainHeight" type="int" value="0"/>
-        <ClientId>6</ClientId>
-    </ObjectTag>
-    <ObjectTag>
         <Name>ResourceNodeVisualStates</Name>
         <SharedStateEntry name="VisualState" type="string" value="Default"/>
     </ObjectTag>   
@@ -640,20 +755,5 @@
         <ClientId>217</ClientId> <!--TankardObject-->
         <ClientId>88</ClientId> <!--PumpkinObject-->
         <ClientId>302</ClientId> <!--GrainCartObject-->
-    </ObjectTag>   
-
-    <ObjectTag>
-        <Name>HasVariation</Name>
-        <SharedStateEntry name="Variation" type="string" value="Default"/>
-        <ClientId>5</ClientId><!--SwordL-->
-        <ClientId>7</ClientId> <!--SwordObject-->
-        <ClientId>232</ClientId> <!--MaceObject-->
-        <ClientId>50</ClientId> <!--MagicStaffObject-->
-        <ClientId>231</ClientId> <!--TwoHammerObject-->
-        <ClientId>133</ClientId> <!--ShieldObject-->
-        <ClientId>132</ClientId> <!--TwoAxeObject-->
-        <ClientId>123</ClientId> <!--HalberdObject-->
-        <ClientId>75</ClientId> <!--Chest-->
-    </ObjectTag>   
-
+    </ObjectTag>
 </ObjectTags>

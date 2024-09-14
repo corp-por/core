@@ -4,51 +4,51 @@
 3	
 4	Prefabs/WorldObjects/Equipment/BackpackObject
 5	Prefabs/WorldObjects/Equipment/SwordLObject
-6	Prefabs/WorldObjects/Consumables/LogsObject
-7	Prefabs/WorldObjects/Equipment/SwordObject
-8	
+6	Prefabs/WorldObjects/Resources/LogsObject
+7	Prefabs/WorldObjects/Equipment/Weapons/SwordObject1
+8	Prefabs/WorldObjects/Equipment/Weapons/SwordObject2
 9	Prefabs/WorldObjects/Resources/CoinsObject
-10	
-11	
-12	
-13	
-14	
-15	
-16	
-17	
-18	
-19	
-20	
-21	
-22	
-23	
-24	
+10	Prefabs/WorldObjects/Resources/SmallRock1
+11	Prefabs/WorldObjects/Resources/SmallRock2
+12	Prefabs/WorldObjects/Resources/Gem1
+13	Prefabs/WorldObjects/Resources/Gem2
+14	Prefabs/WorldObjects/Resources/Gem3
+15	Prefabs/WorldObjects/Equipment/Weapons/TwoHammerObject2
+16	Prefabs/WorldObjects/Equipment/Weapons/TwoHammerObject3
+17	Prefabs/WorldObjects/Equipment/Weapons/TwoHammerObject4
+18	Prefabs/WorldObjects/Equipment/Weapons/TwoHammerObject5
+19	Prefabs/WorldObjects/Equipment/Weapons/TwoHammerObject6
+20	Prefabs/WorldObjects/Equipment/Weapons/TwoHammerObject7
+21	Prefabs/WorldObjects/Equipment/Weapons/SwordObject3
+22	Prefabs/WorldObjects/Equipment/Weapons/SwordObject4
+23	Prefabs/WorldObjects/Equipment/Weapons/SwordObject5
+24	Prefabs/WorldObjects/Equipment/Weapons/SwordObject6
 25	Prefabs/Mobiles/SyntyPeasantObject
 26	Prefabs/Mobiles/SyntyMilitiaObject
 27	Prefabs/Mobiles/SyntyKnightObject
-28	Prefabs/WorldObjects/Equipment/HatchetObject
-29	
-30	
-31	
-32	
-33	
-34	
-35	
-36	
-37	
-38	
-39	
+28	Prefabs/WorldObjects/Equipment/Tools/HatchetObject
+29	Prefabs/WorldObjects/Equipment/Weapons/SwordObject7
+30	Prefabs/WorldObjects/Equipment/Weapons/SwordObject8
+31	Prefabs/WorldObjects/Equipment/Weapons/SwordObject9
+32	Prefabs/WorldObjects/Equipment/Weapons/SwordObject10
+33	Prefabs/WorldObjects/Equipment/Weapons/SwordObject11
+34	Prefabs/WorldObjects/Equipment/Weapons/SwordObject12
+35	Prefabs/WorldObjects/Equipment/Weapons/SwordObject13
+36	Prefabs/WorldObjects/Equipment/Weapons/SwordObject14
+37	Prefabs/WorldObjects/Equipment/Weapons/SwordObject15
+38	Prefabs/WorldObjects/Equipment/Weapons/SwordObject16
+39	Prefabs/WorldObjects/Equipment/Weapons/SwordObject17
 40	Prefabs/WorldObjects/Equipment/BowObject
 41	Prefabs/WorldObjects/Equipment/ArrowObject
 42	Prefabs/WorldObjects/Props/BrickObject
 43	Prefabs/WorldObjects/Props/CampfireObject
 44	Prefabs/WorldObjects/Props/ChestObject
-45	
-46	
-47	
-48	
-49	
-50	Prefabs/WorldObjects/Equipment/MagicStaffObject
+45	Prefabs/WorldObjects/Equipment/Weapons/SwordObject18
+46	Prefabs/WorldObjects/Equipment/Weapons/SwordObject19
+47	Prefabs/WorldObjects/Equipment/Weapons/SwordObject20
+48	Prefabs/WorldObjects/Equipment/Weapons/SwordObject21
+49	Prefabs/WorldObjects/Equipment/Weapons/SwordObject22
+50	Prefabs/WorldObjects/Equipment/Weapons/StaffObject1
 51	Prefabs/Mobiles/SkeletonSlaveObject
 52	Prefabs/Mobiles/SkeletonSoldierObject
 53	Prefabs/Mobiles/SkeletonSoldier2Object
@@ -79,21 +79,21 @@
 78	Prefabs/WorldObjects/Equipment/PlateGlovesObject
 79	Prefabs/WorldObjects/Equipment/Helm02Object
 80	Prefabs/WorldObjects/Equipment/PlateLegsObject
-81	
-82	
-83	
-84	
-85	
-86	
-87	
+81	Prefabs/WorldObjects/Equipment/Weapons/SwordObject23
+82	Prefabs/WorldObjects/Equipment/Weapons/SwordObject24
+83	Prefabs/WorldObjects/Equipment/Weapons/SwordObject25
+84	Prefabs/WorldObjects/Equipment/Weapons/SwordObject26
+85	Prefabs/WorldObjects/Equipment/Weapons/SwordObject27
+86	Prefabs/WorldObjects/Equipment/Weapons/SwordObject28
+87	Prefabs/WorldObjects/Equipment/Weapons/SwordObject29
 88	Prefabs/WorldObjects/Resources/PumpkinResourceObject
-89	
-90	
+89	Prefabs/WorldObjects/Equipment/Weapons/SwordObject30
+90	Prefabs/WorldObjects/Equipment/Weapons/SwordObject31
 91	Prefabs/WorldObjects/Props/CastleDoorObject
-92	
+92	Prefabs/WorldObjects/Equipment/Weapons/SwordObject32
 93	Prefabs/WorldObjects/Props/HouseDoorObject
 94	Prefabs/WorldObjects/Props/TrainingDummyObject
-95	
+95	Prefabs/WorldObjects/Equipment/Weapons/SwordObject33
 96	Prefabs/WorldObjects/Equipment/BearHelmObject
 97	Prefabs/WorldObjects/Equipment/WolfHelmObject
 98	Prefabs/WorldObjects/Equipment/HideArmsObject
@@ -106,9 +106,9 @@
 105	Prefabs/WorldObjects/Equipment/LeatherChestObject
 106	Prefabs/WorldObjects/Equipment/LeatherGlovesObject
 107	Prefabs/WorldObjects/Equipment/LeatherLegsObject
-108	Prefabs/WorldObjects/Equipment/SpearObject
-109	Prefabs/WorldObjects/Consumables/OreObject
-110	Prefabs/WorldObjects/Consumables/IngotObject
+108	Prefabs/WorldObjects/Equipment/Weapons/SpearObject
+109	Prefabs/WorldObjects/Resources/OreObject
+110	Prefabs/WorldObjects/Resources/IngotObject
 111	Prefabs/WorldObjects/Consumables/MeatCookedObject
 112	Prefabs/WorldObjects/Consumables/MeatRawObject
 113	Prefabs/WorldObjects/Consumables/PotionAObject
@@ -119,9 +119,9 @@
 118	Prefabs/WorldObjects/Consumables/PotionFObject
 119	Prefabs/WorldObjects/Consumables/WoodObject
 120	Prefabs/WorldObjects/Consumables/YarnObject
-121	Prefabs/WorldObjects/Equipment/HammerObject
-122	Prefabs/WorldObjects/Equipment/PickObject
-123	Prefabs/WorldObjects/Equipment/TwoAxeObject
+121	Prefabs/WorldObjects/Equipment/Tools/HammerObject
+122	Prefabs/WorldObjects/Equipment/Tools/PickObject
+123	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject1
 124	Prefabs/Mobiles/TitanObject
 125	Prefabs/Mobiles/DemonObject
 126	Prefabs/Mobiles/BigOrkObject
@@ -130,8 +130,8 @@
 129	Prefabs/Mobiles/GhostFemaleObject
 130	Prefabs/Mobiles/TormentedSoulObject
 131	Prefabs/WorldObjects/Equipment/WizardHatObject
-132	Prefabs/WorldObjects/Equipment/HalberdObject
-133	Prefabs/WorldObjects/Equipment/ShieldObject
+132	Prefabs/WorldObjects/Equipment/Weapons/HalberdObject1
+133	Prefabs/WorldObjects/Equipment/Shields/ShieldObject1
 134	Prefabs/WorldObjects/Props/CapturePointObject
 135	Prefabs/WorldObjects/Props/CapturePointObjectGreen
 136	Prefabs/WorldObjects/Props/CapturePointObjectPurple
@@ -140,9 +140,9 @@
 139	Prefabs/Mobiles/SyntyJesterObject
 140	Prefabs/WorldObjects/Equipment/CapeObject
 141	Prefabs/WorldObjects/Equipment/ShroudObject
-142	
+142	Prefabs/WorldObjects/Equipment/Weapons/SwordObject34
 143	Prefabs/WorldObjects/Props/HouseDoor2Object
-144	
+144	Prefabs/WorldObjects/Equipment/Weapons/SwordObject35
 145	Prefabs/Mobiles/DeathknightObject
 146	Prefabs/Mobiles/BlackBearObject
 147	Prefabs/Mobiles/BlackBoarObject
@@ -157,14 +157,14 @@
 156	Prefabs/Mobiles/SpiderRedObject
 157	Prefabs/Mobiles/TimberWolfObject
 158	Prefabs/Mobiles/BlackWolfObject
-159	
-160	
-161	
-162	
-163	
-164	
-165	
-166	
+159	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject2
+160	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject3
+161	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject4
+162	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject5
+163	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject6
+164	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject7
+165	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject8
+166	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject9
 167	Prefabs/WorldObjects/Resources/ScarabObject
 168	Prefabs/WorldObjects/Equipment/Hat02Object
 169	Prefabs/WorldObjects/Equipment/Hat03Object
@@ -194,21 +194,21 @@
 193	Prefabs/WorldObjects/Resources/RedMushroomResourcesObject
 194	Prefabs/WorldObjects/Resources/GinsengResourceObject
 195	Prefabs/WorldObjects/Resources/ThornResourceObject
-196	Prefabs/WorldObjects/Resources/WhiteFlowerResourceObject
-197	Prefabs/WorldObjects/Resources/YellowFlowerResourceObject
+196	Prefabs/WorldObjects/Resources/Flower1ResourceObject
+197	Prefabs/WorldObjects/Resources/Flower2ResourceObject
 198	Prefabs/Mobiles/TigerObject
-199	
+199	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject10
 200	Prefabs/WorldObjects/Resources/CarpResourceObject
-201	
+201	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject11
 202	Prefabs/WorldObjects/Resources/LobsterResourceObject
 203	Prefabs/WorldObjects/Props/WeaponRackObject
 204	Prefabs/WorldObjects/Props/SquareDoorObject
 205	Prefabs/WorldObjects/Equipment/PantLegsObject
 206	Prefabs/WorldObjects/Props/LootChestObject
-207	Prefabs/WorldObjects/Benches/SmithingBenchObject
+207	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject12
 208	Prefabs/Mobiles/SyntyPeasantFemaleObject
-209	Prefabs/WorldObjects/Equipment/PitchforkObject
-210	Prefabs/WorldObjects/Equipment/DaggerObject
+209	Prefabs/WorldObjects/Equipment/Tools/PitchforkObject
+210	Prefabs/WorldObjects/Equipment/Tools/KnifeObject
 211	Prefabs/WorldObjects/Consumables/BoneSteakObject
 212	Prefabs/WorldObjects/Consumables/ChickenCookedObject
 213	Prefabs/WorldObjects/Consumables/SausageObject
@@ -229,8 +229,8 @@
 228	Prefabs/WorldObjects/Props/FishRackObject
 229	Prefabs/WorldObjects/Props/AshLogObject
 230	Prefabs/Mobiles/ChiefAshObject
-231	Prefabs/WorldObjects/Equipment/TwoHammerObject
-232	Prefabs/WorldObjects/Equipment/MaceObject
+231	Prefabs/WorldObjects/Equipment/Weapons/TwoHammerObject1
+232	Prefabs/WorldObjects/Equipment/Weapons/MaceObject1
 233	Prefabs/Mobiles/StarvingBearObject
 234	Prefabs/Mobiles/SyntyPeasantWardholmeObject
 235	Prefabs/Mobiles/SyntyPeasantFemaleWardholmeObject
@@ -246,7 +246,7 @@
 245	Prefabs/Mobiles/DiseasedBoarObject
 246	Prefabs/Mobiles/LochlingObject
 247	Prefabs/Mobiles/MurrayObject
-248	Prefabs/WorldObjects/Consumables/LeatherObject
+248	Prefabs/WorldObjects/Resources/LeatherObject
 249	Prefabs/Mobiles/BlackWizardObject
 250	Prefabs/Mobiles/SkeletonWizardObject
 251	Prefabs/Mobiles/SyntyCaptainObject
@@ -314,3 +314,69 @@
 313	Prefabs/WorldObjects/Equipment/ChainGlovesObject
 314	Prefabs/WorldObjects/Equipment/ChainBootsObject
 315	Prefabs/WorldObjects/Equipment/KiltHipsObject
+316	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject13
+317	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject14
+318	Prefabs/WorldObjects/Equipment/Weapons/TwoAxeObject15
+319	Prefabs/WorldObjects/Equipment/Weapons/HalberdObject2
+320	Prefabs/WorldObjects/Equipment/Weapons/HalberdObject3
+321	Prefabs/WorldObjects/Equipment/Shields/ShieldObject2
+322	Prefabs/WorldObjects/Equipment/Shields/ShieldObject3
+323	Prefabs/WorldObjects/Equipment/Shields/ShieldObject4
+324	Prefabs/WorldObjects/Equipment/Shields/ShieldObject5
+325	Prefabs/WorldObjects/Equipment/Shields/ShieldObject6
+326	Prefabs/WorldObjects/Equipment/Shields/ShieldObject7
+327	Prefabs/WorldObjects/Equipment/Shields/ShieldObject8
+328	Prefabs/WorldObjects/Equipment/Shields/ShieldObject9
+329	Prefabs/WorldObjects/Equipment/Shields/ShieldObject10
+330	Prefabs/WorldObjects/Equipment/Shields/ShieldObject11
+331	Prefabs/WorldObjects/Equipment/Shields/ShieldObject12
+332	Prefabs/WorldObjects/Equipment/Shields/ShieldObject13
+333	Prefabs/WorldObjects/Equipment/Shields/ShieldObject14
+334	Prefabs/WorldObjects/Equipment/Shields/ShieldObject15
+335	Prefabs/WorldObjects/Equipment/Shields/ShieldObject16
+336	Prefabs/WorldObjects/Equipment/Shields/ShieldObject17
+337	Prefabs/WorldObjects/Equipment/Shields/ShieldObject18
+338	Prefabs/WorldObjects/Equipment/Shields/ShieldObject19
+339	Prefabs/WorldObjects/Equipment/Shields/ShieldObject20
+340	Prefabs/WorldObjects/Equipment/Shields/ShieldObject21
+341	Prefabs/WorldObjects/Equipment/Weapons/DaggerObject1
+342	Prefabs/WorldObjects/Equipment/Weapons/DaggerObject2
+343	Prefabs/WorldObjects/Equipment/Weapons/DaggerObject3
+344	Prefabs/WorldObjects/Equipment/Weapons/DaggerObject4
+345	Prefabs/WorldObjects/Equipment/Weapons/DaggerObject5
+346	Prefabs/WorldObjects/Equipment/Weapons/DaggerObject6
+347	Prefabs/WorldObjects/Equipment/Weapons/DaggerObject7
+348	Prefabs/WorldObjects/Equipment/Weapons/DaggerObject8
+349	Prefabs/WorldObjects/Equipment/Weapons/DaggerObject9
+350	Prefabs/WorldObjects/Equipment/Weapons/DaggerObject10
+351	Prefabs/WorldObjects/Equipment/Weapons/DaggerObject11
+352	Prefabs/WorldObjects/Equipment/Weapons/DaggerObject12
+353	Prefabs/WorldObjects/Equipment/Weapons/DaggerObject13
+354	Prefabs/WorldObjects/Equipment/Weapons/MaceObject2
+355	Prefabs/WorldObjects/Equipment/Weapons/MaceObject3
+356	Prefabs/WorldObjects/Equipment/Weapons/MaceObject4
+357	Prefabs/WorldObjects/Equipment/Weapons/MaceObject5
+358	Prefabs/WorldObjects/Equipment/Weapons/MaceObject6
+359	Prefabs/WorldObjects/Equipment/Weapons/MaceObject7
+360	Prefabs/WorldObjects/Equipment/Weapons/MaceObject8
+361	Prefabs/WorldObjects/Equipment/Weapons/MaceObject9
+362	Prefabs/WorldObjects/Equipment/Weapons/MaceObject10
+363	Prefabs/WorldObjects/Equipment/Weapons/MaceObject11
+364	Prefabs/WorldObjects/Equipment/Weapons/MaceObject12
+365	Prefabs/WorldObjects/Equipment/Weapons/MaceObject13
+366	Prefabs/WorldObjects/Equipment/Weapons/MaceObject14
+367	Prefabs/WorldObjects/Equipment/Weapons/StaffObject2
+368	Prefabs/WorldObjects/Equipment/Weapons/StaffObject3
+369	Prefabs/WorldObjects/Equipment/Weapons/StaffObject4
+370	Prefabs/WorldObjects/Equipment/Weapons/StaffObject5
+371	Prefabs/WorldObjects/Equipment/Weapons/StaffObject6
+372	Prefabs/WorldObjects/Equipment/Weapons/StaffObject7
+373	Prefabs/WorldObjects/Equipment/Weapons/StaffObject8
+374	Prefabs/WorldObjects/Equipment/Weapons/StaffObject9
+375	Prefabs/WorldObjects/Equipment/Weapons/StaffObject10
+376	Prefabs/WorldObjects/Equipment/Weapons/StaffObject11
+377	Prefabs/WorldObjects/Equipment/Weapons/StaffObject12
+378	Prefabs/WorldObjects/Equipment/Weapons/StaffObject13
+379	Prefabs/WorldObjects/Equipment/Weapons/StaffObject14
+380	Prefabs/WorldObjects/Equipment/Weapons/StaffObject15
+381	Prefabs/WorldObjects/Equipment/Weapons/StaffObject16
