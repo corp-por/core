@@ -25,7 +25,7 @@ function UI.Main.Window(playerObj, init)
 		"Transparent",--windowType, --(string) Window type (optional)
 		"Right", --windowAnchor --(string) Window anchor (default "TOPLEFT")
 		-1, --windowDepth
-		"mainui" -- this currently identifies that this window will be hidden unless toggled by keybind for Backpack/inventory.
+		"mainui" -- this currently identifies that this window will be hidden unless toggled by keybind for Character Window.
     )
 
     if ( init ) then
