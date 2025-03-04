@@ -110,7 +110,11 @@ Effects.Harvest = {
         -- reward
         local reward = self.HarvestableTable.Reward
         if ( reward ~= nil ) then
-            Create.InBackpack(reward, self.Parent)
+            Create.InBackpack(reward, self.Parent, nil, function(obj, err)
+                if ( obj == nil and err == "full" ) then
+                    Create.AtLoc(reward, self.Parent:GetLoc())
+                end
+            end)
         end
 
         -- remove

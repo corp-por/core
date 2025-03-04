@@ -142,7 +142,7 @@ function Container.TryAdd(containerObj, addingObj, addingLocation)
     end
 
 	-- make sure it does not put the container over capacity (capacity does not count items in stacks)
-	if not( containerObj:CanHold(addingObj) ) then		
+	if not( containerObj:CanHold(addingObj) ) then
 		return false,"[$3334]"
 	end
     
