@@ -112,7 +112,11 @@ Effects.Harvest = {
         if ( reward ~= nil ) then
             Create.InBackpack(reward, self.Parent, nil, function(obj, err)
                 if ( obj == nil and err == "full" ) then
-                    Create.AtLoc(reward, self.Parent:GetLoc())
+                    Create.AtLoc(reward, self.Parent:GetLoc(), function(obj)
+                        if ( obj ~= nil ) then
+                            Object.Decay(obj)
+                        end
+                    end)
                 end
             end)
         end
