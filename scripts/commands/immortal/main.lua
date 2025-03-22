@@ -54,6 +54,10 @@ Include.functions = {
         end
     end,
     GoTo = function(x, y, z)
+        if ( x == nil and y == nil and z == nil ) then
+            this:AddModule("commands.immortal.goto")
+            return
+        end
         if ( z == nil ) then
             z = y
         end

@@ -1,0 +1,34 @@
+{
+	ClientId = 253,
+	Name = "Taxi",
+	SharedProperties = {
+		BodyOffset = 0.5,
+		Title = "Dispatcher"
+	},
+	Mobile = {},
+	ObjVars = {
+		DialogPortrait = "Chuckles"
+	},
+
+	
+    -- define this property to signal this object can be interacted within the world (doesn't require being in a container)
+    InteractionRange = ServerSettings.Interaction.ObjectInteractionRange + 0.5,
+    -- define what happens when 'used' (interacted with)
+    OnUse = function(this, user)
+        if ( Interaction.WithinRange(this, user) ) then
+            LookAt(this, user)
+            
+            local r = {
+                {
+                    Name = "Route A",
+                    Route = {
+                        Loc(-23,10,60), -- first one is always the start
+                        Loc(73,10,72) -- last one in list is the destination
+                    }
+                }
+            }
+
+            Effect.Apply(user, "OfferTaxi", {Routes = r})
+        end
+    end
+}

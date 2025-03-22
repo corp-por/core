@@ -5,6 +5,7 @@
 -- @module globals.engine_callbacks
 
 --- Return a list full of MapObjTypes, telling client a player can interact with them (right click) and a use command will be sent to server.
+-- Requires a server restart to reflect changes.
 InteractableMapObjTypes = {MapObjType.Tree, MapObjType.Rock}
 function GetInteractableMapObjTypes()
 	return InteractableMapObjTypes

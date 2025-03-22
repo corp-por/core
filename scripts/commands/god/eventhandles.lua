@@ -3,7 +3,6 @@
 function OnWorldResetDestroyComplete()
 	DebugMessage("--- (WorldReset) OBJECTS DESTROYED --- LOADING SEEDS ---")
 	LoadSeeds()
-	ResetPermanentObjectStates()
 end
 
 RegisterEventHandler(EventType.DestroyAllComplete, "WorldReset", function()

@@ -6,3 +6,6 @@ Effects = {}
 require 'globals.effects.example'
 
 require 'globals.effects.common._main'
+
+require 'globals.effects.taxi.taxi'
+require 'globals.effects.taxi.offertaxi'

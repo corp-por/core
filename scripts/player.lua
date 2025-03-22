@@ -128,8 +128,8 @@ function HandleUseCommand(usedObjectId)
 	Interaction.TryUse(this, object)
 end
 
-function HandleMapObjUseCommand(index, layer, x, z)
-	local mapObj = MapObj(tonumber(index), tonumber(x), tonumber(z), tonumber(layer))
+function HandleMapObjUseCommand(tx, ty, layer)
+	local mapObj = MapObj.GetInteractableAtTile(tonumber(tx), tonumber(ty), layer == nil and 0 or tonumber(layer))
 	Interaction.TryUseMapObj(mapObj, this)
 end
 

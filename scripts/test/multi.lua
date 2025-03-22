@@ -1,1 +1,1 @@
-PasteMulti("smallhouse", this:GetLoc(), 180)
+PasteMulti("smallhouse", this:GetLoc(), 0)

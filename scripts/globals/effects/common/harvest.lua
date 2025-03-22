@@ -44,8 +44,14 @@ Effects.Harvest = {
         if ( (self.Pulses or 0) < Effects.Harvest.Pulse ) then
             if ( self.MapObj.ObjectType == MapObjType.Tree ) then
                 self.Parent:PlayAnimation("choph")
+                CallFunctionDelayed(TimeSpan.FromSeconds(0.5), function()
+                    self.Parent:PlayObjectSound("event:/character/skills/gathering_skills/lumberjack/lumberjack", false)
+                end)
             elseif ( self.MapObj.ObjectType == MapObjType.Rock ) then
                 self.Parent:PlayAnimation("chopv")
+                CallFunctionDelayed(TimeSpan.FromSeconds(0.5), function()
+                    self.Parent:PlayObjectSound("event:/character/skills/gathering_skills/mining/mining", false)
+                end)
             end
         end
 
